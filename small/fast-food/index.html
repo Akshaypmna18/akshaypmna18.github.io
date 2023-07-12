@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navami</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            #container1 {
+                height: 70vh;
+                background: url('https://st.depositphotos.com/1005682/2476/i/450/depositphotos_24762569-stock-photo-fast-food-hamburger-hot-dog.jpg');
+                background-repeat: none;
+                background-position: center;
+                background-size: cover;
+                color: #fff;
+            }
+
+            #container1 h2 {
+                text-align: center;
+                font-size: 3rem;
+            }
+
+            #container2 div {
+                border: 1px solid;
+                border-radius: 10px;
+                margin: 0.5rem;
+                padding: 0.5rem;
+            }
+
+            #container2 img {
+                width: 100%;
+            }
+
+            @media (min-width:770px) {
+                #container2 {
+                    display: flex;
+                }
+
+                #container2 div {
+                    width: 25%;
+                }
+
+                #container2 img {
+                    height: 80%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container1">
+            <h2>𝒇𝒂𝒔𝒕𝒇𝒐𝒐𝒅</h2>
+        </div>
+        <div id="container2">
+            <div>
+                <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80"
+                    alt="">
+                <p>burger</p>
+                <a href="#">buy now Rs.150</a>
+                </img>
+            </div>
+            <div>
+                <img src="https://kauveryhospital.com/blog/wp-content/uploads/2021/04/pizza-5179939_960_720.jpg" alt="">
+                <p>pizza</p>
+                <a href="#">buy now Rs.350</a>
+                </img>
+            </div>
+            <div>
+                <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Baked-Chicken-Nuggets.jpg" alt="">
+                <p>nuggets</p>
+                <a href="#">buy now Rs.200</a>
+                </img>
+            </div>
+            <div>
+                <img src="https://static.toiimg.com/thumb/60275824.cms?width=1200&height=900" alt="">
+                <p>momos</p>
+                <a href="#">buy now Rs.300</a>
+                </img>
+            </div>
+        </div>
+    </body>
+
+</html>
