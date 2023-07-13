@@ -7,14 +7,3 @@
 body {
   background-color: #000;
 }
-
-.main-heading {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-transform: uppercase;
-  font-size: 4rem;
-  opacity: 0.1;
-  color: #fff;
-}
