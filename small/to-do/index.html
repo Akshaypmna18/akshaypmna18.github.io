@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ToDo</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: #e0fbfc;
+                display: grid;
+                place-items: center;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #container {
+                position: relative;
+                padding-top: 10rem;
+            }
+
+            #input-box {
+                background-color: #98c1d9;
+                padding: 0.5rem;
+                outline: none;
+                border: transparent;
+                border-radius: 8px;
+            }
+
+            #btn {
+                background-color: #3d5a80;
+                color: #fff;
+                padding: 0.5rem;
+                border-radius: 8px;
+                outline: none;
+                border: transparent;
+                cursor: pointer;
+            }
+
+            li {
+                background-color: #293241;
+                color: #e0fbfc;
+                border-radius: 5px;
+                list-style-type: none;
+                text-align: center;
+                width: 80%;
+                margin: 1rem auto;
+                padding: 0.5rem;
+            }
+
+            @media (min-width:480px) {
+                #input-box {
+                    font-size: 1.2rem;
+                }
+
+                #btn {
+                    font-size: 1.2rem;
+                }
+
+                li {
+                    font-size: 1.2rem;
+                }
+            }
+
+            @media (min-width:770px) {
+                #input-box {
+                    font-size: 1.4rem;
+                }
+
+                #btn {
+                    font-size: 1.4rem;
+                }
+
+                li {
+                    font-size: 1.4rem;
+                }
+            }
+
+            @media (min-width:1025px) {
+                #input-box {
+                    font-size: 1.6rem;
+                }
+
+                #btn {
+                    font-size: 1.6rem;
+                }
+
+                li {
+                    font-size: 1.6rem;
+                }
+            }
+
+            @media (min-width:1200px) {
+                #input-box {
+                    font-size: 1.8rem;
+                }
+
+                #btn {
+                    font-size: 1.8rem;
+                }
+
+                li {
+                    font-size: 1.8rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <input id="input-box" type="text" placeholder="Enter the task...">
+            <button id="btn">Add Task</button>
+            <ul id="list">
+            </ul>
+        </div>
+
+        <script>
+            var btn = document.getElementById('btn')
+            var list = document.getElementById('list')
+            var input = document.getElementById('input-box')
+
+            btn.addEventListener('click', function () {
+                var newListItem = document.createElement('li')
+                if (input.value != "") {
+                    var textNode = document.createTextNode(input.value)
+                } else { alert('Enter a task') }
+                newListItem.appendChild(textNode)
+                list.appendChild(newListItem)
+            })
+            document.addEventListener('keydown', function (e) {
+                var newListItem = document.createElement('li')
+                var keyCode = e.keyCode
+                if (keyCode == 13) {
+                    if (input.value != "") {
+                        var textNode = document.createTextNode(input.value)
+                    } else { alert('Enter a task') }
+                }
+                newListItem.appendChild(textNode)
+                list.appendChild(newListItem)
+            })
+        </script>
+    </body>
+
+</html>
