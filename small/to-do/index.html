@@ -37,12 +37,19 @@
                 margin: 0.5rem 0;
             }
 
+            #input-wrapper {
+                position: relative;
+                display: flex;
+                justify-content: center;
+            }
+
             #input-box {
                 background-color: #98c1d9;
                 padding: 0.5rem;
                 outline: none;
                 border: transparent;
                 border-radius: 8px;
+                margin-right: 0.5rem;
             }
 
             #btn {
@@ -128,9 +135,11 @@
     <body>
         <div id="container">
             <h1>To Do</h1>
-            <p>Click on the task after you have done it</p>
-            <input id="input-box" type="text" placeholder="Enter the task...">
-            <button id="btn">Add Task</button>
+            <p>Click on the task once you have completed it</p>
+            <div id="input-wrapper">
+                <input id="input-box" type="text" placeholder="Enter the task...">
+                <button id="btn">Add Task</button>
+            </div>
             <ul id="list">
             </ul>
         </div>
