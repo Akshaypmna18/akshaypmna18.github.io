@@ -28,7 +28,7 @@ document.addEventListener("keydown", function (e) {
 
 list.addEventListener("click", function (e) {
   var element = e.target;
-  element.style.backgroundColor = "#ee2e31";
+  element.style.backgroundColor = "#420c09";
   setTimeout(function () {
     element.remove();
   }, 1000);
