@@ -8,6 +8,14 @@ function addTask() {
     var textNode = document.createTextNode(input.value);
   } else {
     alert("Enter a task");
+    return;
+  }
+  var tasks = list.getElementsByTagName("li");
+  for (var i = 0; i < tasks.length; i++) {
+    if (tasks[i].textContent.trim() === textNode.textContent.trim()) {
+      alert("Task already exists");
+      return;
+    }
   }
   newListItem.appendChild(textNode);
   list.appendChild(newListItem);
