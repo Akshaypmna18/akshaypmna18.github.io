@@ -2,7 +2,7 @@ var btn = document.getElementById("btn");
 var list = document.getElementById("list");
 var input = document.getElementById("input-box");
 
-btn.addEventListener("click", function () {
+function addTask() {
   var newListItem = document.createElement("li");
   if (input.value != "") {
     var textNode = document.createTextNode(input.value);
@@ -11,19 +11,14 @@ btn.addEventListener("click", function () {
   }
   newListItem.appendChild(textNode);
   list.appendChild(newListItem);
-});
+  input.value = "";
+}
+
+btn.addEventListener("click", addTask);
 document.addEventListener("keydown", function (e) {
-  var newListItem = document.createElement("li");
-  var keyCode = e.keyCode;
-  if (keyCode == 13) {
-    if (input.value != "") {
-      var textNode = document.createTextNode(input.value);
-    } else {
-      alert("Enter a task");
-    }
+  if (e.keyCode == 13) {
+    addTask();
   }
-  newListItem.appendChild(textNode);
-  list.appendChild(newListItem);
 });
 
 list.addEventListener("click", function (e) {
@@ -31,5 +26,5 @@ list.addEventListener("click", function (e) {
   element.style.backgroundColor = "#420c09";
   setTimeout(function () {
     element.remove();
-  }, 1000);
+  }, 500);
 });
