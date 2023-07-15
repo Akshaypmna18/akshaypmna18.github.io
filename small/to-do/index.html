@@ -5,20 +5,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ToDo</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <div id="container">
-            <h1>To Do</h1>
-            <p>Click on the task once you have completed it</p>
+        <section>
+            <h1>ToDo</h1>
             <div id="input-wrapper">
-                <input id="input-box" type="text" placeholder="Enter the task..." autofocus>
-                <button id="btn">Add Task</button>
+                <input id="input-box" class="box" type="text" autofocus>
+                <button id="btn" class="box">Add Task</button>
             </div>
             <ul id="list">
             </ul>
-        </div>
+        </section>
 
         <script src="script.js"></script>
     </body>

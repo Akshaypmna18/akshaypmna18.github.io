@@ -1,38 +1,53 @@
-var btn = document.getElementById("btn");
-var list = document.getElementById("list");
-var input = document.getElementById("input-box");
+var input = document.getElementById("input-box"),
+  btn = document.getElementById("btn"),
+  list = document.getElementById("list");
 
 function addTask() {
-  var newListItem = document.createElement("li");
+  var newTask = document.createElement("li");
+  var taskName, checkBox, dIcon;
+
   if (input.value != "") {
-    var textNode = document.createTextNode(input.value);
+    taskName = document.createTextNode(input.value);
   } else {
     alert("Enter a task");
     return;
   }
   var tasks = list.getElementsByTagName("li");
   for (var i = 0; i < tasks.length; i++) {
-    if (tasks[i].textContent.trim() === textNode.textContent.trim()) {
+    if (tasks[i].textContent.trim() === taskName.textContent.trim()) {
       alert("Task already exists");
       return;
     }
   }
-  newListItem.appendChild(textNode);
-  list.appendChild(newListItem);
+
+  dIcon = document.createElement("i");
+  dIcon.classList.add("fas", "fa-trash-alt");
+  dIcon.onclick = function () {
+    newTask.remove();
+  };
+
+  checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
+  checkBox.addEventListener("change", function () {
+    if (this.checked) {
+      newTask.classList.add("completed");
+      newTask.style.color = "#AD8B73";
+    } else {
+      newTask.classList.remove("completed");
+      newTask.style.color = "#000";
+    }
+  });
+
+  newTask.appendChild(dIcon);
+  newTask.appendChild(checkBox);
+  newTask.appendChild(taskName);
+  list.appendChild(newTask);
+
   input.value = "";
+  return newTask;
 }
 
 btn.addEventListener("click", addTask);
-document.addEventListener("keydown", function (e) {
-  if (e.keyCode == 13) {
-    addTask();
-  }
-});
-
-list.addEventListener("click", function (e) {
-  var element = e.target;
-  element.style.backgroundColor = "#420c09";
-  setTimeout(function () {
-    element.remove();
-  }, 500);
+input.addEventListener("keydown", function (e) {
+  if (e.keyCode == 13) addTask();
 });
