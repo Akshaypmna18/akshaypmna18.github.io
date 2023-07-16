@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Google</title>
+        <link rel="icon" type="image/x-icon" href="https://www.google.com/favicon.ico">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a class="menu-items" href="googleSignInpage">Gmail</a>
+                <a class="menu-items" href="googleImagepage">Images</a>
+                <div id="dropdown-wrapper">
+                    <ion-icon id="dropdown-menu-icon" name="apps"></ion-icon>
+                    <div id="dropdown-menu" class="hide">
+                        <div class="app-items">
+                            <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+                                alt="Google search">
+                            <p>Search</p>
+                        </div>
+                        <div class="app-items">
+                            <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-07-256.png"
+                                alt="Drive">
+                            <p>Drive</p>
+                        </div>
+                        <div class="app-items">
+                            <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/150/google-maps-256.png"
+                                alt="Maps">
+                            <p>Maps</p>
+                        </div>
+                        <div class="app-items">
+                            <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-03-256.png"
+                                alt="Calender">
+                            <p>Calender</p>
+                        </div>
+                        <div class="app-items">
+                            <img src="https://cdn2.iconfinder.com/data/icons/social-media-2259/512/photos-256.png"
+                                alt="Photos">
+                            <p>Photos</p>
+                        </div>
+                        <div class="app-items">
+                            <img src="https://cdn0.iconfinder.com/data/icons/3-colors-outline/500/Keep-256.png"
+                                alt="Keep">
+                            <p>Keep</p>
+                        </div>
+                    </div>
+                </div>
+                <img id="profile-pic" src="https://s.ndtvimg.com/images/entities/300/virat-kohli-967.png" alt="virat">
+            </nav>
+        </header>
+
+        <main id="main">
+            <section>
+                <img id="google"
+                    src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                    alt="Google">
+                <br>
+                <div id="input-wrapper">
+                    <input type="text" id="search-box">
+                    <img src="images-and-icons/google-search-icon.png" alt="search-icon">
+                    <img src="https://freepngimg.com/thumb/microphone/70666-voice-microphone-google-search-logo-png-file-hd.png"
+                        alt="google-mic">
+                    <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-06-256.png"
+                        alt="lens">
+                </div>
+                <div>
+                    <button class="custom-btn">Google Search</button>
+                    <button class="custom-btn">I'm Feeling Lucky</button>
+                </div>
+                <p id="lang-text">Google offered in : <a href="#"> हिन्दी </a><a href="#"> বাংলা </a><a href="#"></a>
+                    తెలుగు </a><a href="#"> मराठी </a><a href="#"> தமிழ் </a><a href="#"> ગુજરાતી </a><a href="#"></a>
+                    ಕನ್ನಡ </a><a href="#"> മലയാളം </a><a href="#"> ਪੰਜਾਬੀ </a>
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>India</p>
+            <hr>
+            <div id="footer-items-wrapper">
+                <ul id="left-items">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Advertising</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">How Search works</a></li>
+                </ul>
+                <ul id="right-items">
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script>
+            var dotsMenu = document.getElementById('dropdown-menu-icon')
+            var dropDownMenu = document.getElementById('dropdown-menu')
+            var main = document.getElementById('main')
+
+            dotsMenu.onclick = function () {
+                if (dropDownMenu.classList.contains('hide')) {
+                    dropDownMenu.classList.remove('hide')
+                    main.classList.add('move-down')
+                }
+                else {
+                    dropDownMenu.classList.add('hide')
+                    main.classList.remove('move-down')
+                }
+            }
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    </body>
+
+</html>
