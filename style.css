@@ -20,7 +20,7 @@ nav {
 }
 
 a {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
@@ -30,4 +30,10 @@ a {
 
 nav:hover a:not(:hover) {
   opacity: 0.5;
+}
+
+@media (min-width: 770px) {
+  a {
+    font-size: 3rem;
+  }
 }
