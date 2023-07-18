@@ -32,8 +32,18 @@ nav:hover a:not(:hover) {
   opacity: 0.5;
 }
 
+.laptop {
+  display: none;
+}
+
 @media (min-width: 770px) {
   a {
     font-size: 3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .laptop {
+    display: block;
   }
 }
