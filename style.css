@@ -11,24 +11,47 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  background: #000;
 }
 
 nav {
+  max-width: 80%;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #222;
+  letter-spacing: 0.1rem;
+}
+
+#box-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px #ccc;
 }
 
 a {
-  font-size: 2rem;
   font-weight: bold;
-  color: #fff;
   text-decoration: none;
   text-align: center;
   text-transform: capitalize;
+  color: brown;
 }
 
-nav:hover a:not(:hover) {
+a:hover {
+  transform: scale(1.1);
+}
+
+#box-wrapper:hover a:not(:hover) {
   opacity: 0.5;
 }
 
@@ -36,11 +59,15 @@ nav:hover a:not(:hover) {
   display: none;
 }
 
-@media (min-width: 770px) {
-  a {
-    font-size: 3rem;
-  }
+img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 10rem;
 }
+
+/* 
+Media queries
+*/
 
 @media (min-width: 1000px) {
   .laptop {
