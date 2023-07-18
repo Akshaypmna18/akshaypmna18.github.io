@@ -4,96 +4,34 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Music</title>
+        <title>Music Player</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                letter-spacing: 0.1em;
-                font-weight: bold;
-            }
-
-            body {
-                text-align: center;
-                background: url('https://images.pexels.com/photos/3721941/pexels-photo-3721941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                color: #fff;
-            }
-
-            #container {
-                width: 100vw;
-                height: 100vh;
-                backdrop-filter: blur(5px);
-                position: relative;
-            }
-
-            h1 {
-                padding-top: 1rem;
-            }
-
-            div {
-                position: absolute;
-                top: 50%;
-                right: 0;
-            }
-
-            span {
-                top: 50%;
-                right: 2rem;
-            }
-
-            .fa-solid {
-                background-color: #fff;
-                color: #000;
-                cursor: pointer;
-                width: 2.25rem;
-                border-radius: 50%;
-                padding: 0.75em;
-                text-align: center;
-            }
-
-            .hide {
-                display: none;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <div id="container">
-            <h1>Music <br>is an <br> Emotion</h1>
-            <div>
-                <span>Click here to listen</span>
-                <i id="play" class="fa-solid fa-play"></i>
-                <i id="pause" class="fa-solid fa-pause hide"></i>
-                <audio id="file">
-                    <source type="audio/mp3" src="Katy Perry - Harleys In Hawaii (Official).mp3">
-                </audio>
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Katy_Perry_-_Harleys_in_Hawaii.png" alt="...">
+            <div id="song-details">
+                <p>Harleys in Hawaii</p>
+                <p>Katy Pery</p>
+            </div>
+            <div id="button-wrapper">
+                <i id="previous-btn" class="fa-solid fa-backward-step"></i>
+                <div id="play-pause-wrapper">
+                    <i id="play-btn" class="fa-solid fa-play"></i>
+                    <i id="pause-btn" class="fa-solid fa-pause display"></i>
+                </div>
+                <i id="next-btn" class="fa-solid fa-forward-step"></i>
             </div>
         </div>
+        <audio id="katy-music">
+            <source type="audio/mp3" src="Katy Perry - Harleys In Hawaii (Official).mp3">
+        </audio>
 
-        <script>
-            var playBtn = document.getElementById('play')
-            var pauseBtn = document.getElementById('pause')
-            var file = document.getElementById('file')
-            file.volume = 0.5
-            playBtn.addEventListener('click', function () {
-                playBtn.classList.add('hide')
-                pauseBtn.classList.remove('hide')
-                file.play()
-            })
-            pauseBtn.addEventListener('click', function () {
-                pauseBtn.classList.add('hide')
-                playBtn.classList.remove('hide')
-                file.pause()
-            })
-        </script>
+        <script src="script.js"></script>
     </body>
 
 </html>
