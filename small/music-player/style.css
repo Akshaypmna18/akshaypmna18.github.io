@@ -7,8 +7,18 @@
 
 body {
   height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #222;
+  font-family: fantasy;
+  font-size: 2.5rem;
+  margin: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 #container {
@@ -28,7 +38,7 @@ img {
 #song-details {
   backdrop-filter: blur(50px);
   position: absolute;
-  top: 12.1rem;
+  top: 12.13rem;
   width: 100%;
 }
 
@@ -68,6 +78,7 @@ img {
 }
 
 .fa-solid {
+  color: #222;
   cursor: pointer;
   font-size: 1.5rem;
 }
@@ -78,4 +89,24 @@ img {
 
 audio {
   display: none;
+}
+
+/* 
+Media queries
+*/
+
+@media (min-width: 480px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+}
+@media (min-width: 770px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+}
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
