@@ -12,9 +12,8 @@
     </head>
 
     <body>
-        <h1>Music Player</h1>
         <div id="container">
-            <div>
+            <div id="song-wrapper">
                 <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Katy_Perry_-_Harleys_in_Hawaii.png" alt="...">
                 <div id="song-details">
                     <p id="song-name">Harleys in Hawaii</p>
@@ -29,10 +28,10 @@
                 </div>
                 <i id="next-btn" class="fa-solid fa-forward-step"></i>
             </div>
+            <audio id="katy-music">
+                <source type="audio/mp3" src="Katy Perry - Harleys In Hawaii (Official).mp3">
+            </audio>
         </div>
-        <audio id="katy-music">
-            <source type="audio/mp3" src="Katy Perry - Harleys In Hawaii (Official).mp3">
-        </audio>
 
         <script src="script.js"></script>
     </body>
