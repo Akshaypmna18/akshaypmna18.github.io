@@ -59,7 +59,7 @@ img {
 }
 
 .anim {
-  animation: music 8s linear infinite;
+  animation: music 10s linear infinite;
 }
 
 @keyframes music {
