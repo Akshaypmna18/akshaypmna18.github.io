@@ -37,14 +37,17 @@ img {
   padding: 0 0.5rem;
 }
 
-#song-details p:first-of-type {
+#song-name {
   font-size: 1.5rem;
   font-weight: bold;
-  animation: music 8s linear infinite;
 }
 
 #song-details p:nth-of-type(2) {
   font-size: 1rem;
+}
+
+.anim {
+  animation: music 8s linear infinite;
 }
 
 @keyframes music {
@@ -70,5 +73,9 @@ img {
 }
 
 .display {
+  display: none;
+}
+
+audio {
   display: none;
 }
