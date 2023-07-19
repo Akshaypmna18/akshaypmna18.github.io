@@ -2,7 +2,7 @@ var playBtn = document.getElementById("play-btn");
 var pauseBtn = document.getElementById("pause-btn");
 var katy = document.getElementById("katy-music");
 var songName = document.getElementById("song-name");
-katy.volume = 0.5;
+katy.volume = 0.1;
 
 playBtn.onclick = function () {
   playBtn.classList.toggle("display");
