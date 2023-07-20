@@ -35,6 +35,7 @@ body {
 h1 {
   margin: 0.5rem;
   letter-spacing: 0.1rem;
+  text-shadow: 3px 2px 3px gray;
 }
 
 #song-wrapper {
