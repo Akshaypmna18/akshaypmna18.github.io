@@ -62,7 +62,8 @@ section p:nth-of-type(3) {
 
 #color-wrapper div {
   width: 2.5rem;
-  height: 2rem;
+  height: 2.5rem;
+  aspect-ratio: 1;
   cursor: pointer;
   border-radius: 5px;
 }
