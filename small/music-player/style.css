@@ -13,11 +13,13 @@ body {
   overflow: hidden;
   display: grid;
   place-items: center;
+  background-color: #f6f6f6;
 }
 
 #container {
   width: min(95%, 25rem);
   height: min(80%, 30rem);
+  background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 2px #ccc;
   border-radius: 8px;
