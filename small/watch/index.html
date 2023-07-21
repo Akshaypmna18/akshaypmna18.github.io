@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Smart Watch</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
     <body>
@@ -14,12 +17,16 @@
         </header>
         <main>
             <aside>
+                <div id="heart-rate" class="display box"><i class="fa-solid fa-heart-pulse" style="color: #f70202;"></i>
+                    <p>78</p>
+                </div>
+                <div id="time" class="box">22:22:22</div>
                 <img id="watch" src="watch/black.png" alt="watch">
             </aside>
             <section>
                 <h1>Apple Watch</h1>
                 <p>Apple Watch Ultra [GPS + Cellular 49 mm] smart watch w/Rugged Titanium Case</p>
-                <p>Select Color : <span id="color-name">Black</span></p>
+                <p>Select Color : <span id="color-name" class="normal">Black</span></p>
                 <div id="color-wrapper">
                     <div id="black"></div>
                     <div id="red"></div>
@@ -27,10 +34,10 @@
                     <div id="pink"></div>
                     <div id="purple"></div>
                 </div>
-                <p>Features : <span id="feature-name">Time</span></p>
+                <p>Features : <span id="feature-name" class="normal">Time</span></p>
                 <div id="button-wrapper">
-                    <button>Time</button>
-                    <button>Heart Rate</button>
+                    <button id="time-btn">Time</button>
+                    <button id="heart-rate-btn">Heart Rate</button>
                 </div>
                 <button id="buy-btn">Buy now</button>
             </section>

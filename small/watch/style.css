@@ -34,6 +34,23 @@ aside {
   padding: 0 auto;
   display: grid;
   place-items: center;
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.fa-solid {
+  margin: 0 auto;
+  font-size: 4rem;
+}
+
+.display {
+  display: none;
 }
 
 #watch {
@@ -97,6 +114,10 @@ section p:nth-of-type(3) {
 #button-wrapper button {
   background-color: #ccc;
   margin-right: 0.5rem;
+}
+
+.normal {
+  font-weight: normal;
 }
 
 button {
