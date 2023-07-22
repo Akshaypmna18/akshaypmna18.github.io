@@ -64,7 +64,19 @@ function nextMusic() {
     playMusic();
   }
 }
-function preMusic() {}
+function preMusic() {
+  if (songIndex <= 0) {
+    songIndex = totalSongs - 1;
+    currentSong = songIndex;
+    song(currentSong);
+    playMusic();
+  } else {
+    currentSong = songIndex - 1;
+    song(currentSong);
+    playMusic();
+    songIndex--;
+  }
+}
 
 // Next Button
 
@@ -75,7 +87,7 @@ nextBtn.onclick = function () {
 // Previous Button
 
 previousBtn.onclick = function () {
-  PreMusic();
+  preMusic();
 };
 
 // Play music
