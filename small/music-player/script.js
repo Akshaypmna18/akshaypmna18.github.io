@@ -47,6 +47,16 @@ function nextMusic(currentSong) {
   playMusic();
   songIndex++;
 }
+function preMusic(currentSong) {
+  songImage.src = songs[currentSong].image;
+  music.src = songs[currentSong].link;
+  songName.innerHTML = songs[currentSong].name;
+  artist.innerHTML = songs[currentSong].artist;
+  boxShadow.style.boxShadow = "2px 2px 2px " + songs[currentSong].shadow;
+  textShadow.style.textShadow = "2px 2px 2px " + songs[currentSong].shadow;
+  playMusic();
+  songIndex--;
+}
 
 nextBtn.onclick = function () {
   if (songIndex == 2) {
@@ -55,6 +65,16 @@ nextBtn.onclick = function () {
   } else {
     var currentSong = songIndex + 1;
     nextMusic(currentSong);
+  }
+};
+
+previousBtn.onclick = function () {
+  if (songIndex == -1) {
+    var currentSong = 2;
+    preMusic(currentSong);
+  } else {
+    var currentSong = songIndex - 1;
+    preMusic(currentSong);
   }
 };
 
