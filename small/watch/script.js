@@ -64,7 +64,6 @@ function updateClock() {
     minutes.toString().padStart(2, "0") +
     ":" +
     seconds.toString().padStart(2, "0");
-
   document.getElementById("time").textContent = formattedTime;
 }
 
