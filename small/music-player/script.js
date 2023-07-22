@@ -11,6 +11,8 @@ var nextBtn = document.getElementById("next-btn");
 var previousBtn = document.getElementById("previous-btn");
 music.volume = 0.1;
 
+// songs
+
 var songs = [
   {
     image:
@@ -36,47 +38,47 @@ var songs = [
   },
 ];
 
+var totalSongs = songs.length;
 var songIndex = 0;
-function nextMusic(currentSong) {
+var currentSong;
+
+function song(currentSong) {
   songImage.src = songs[currentSong].image;
   music.src = songs[currentSong].link;
   songName.innerHTML = songs[currentSong].name;
   artist.innerHTML = songs[currentSong].artist;
   boxShadow.style.boxShadow = "2px 2px 2px " + songs[currentSong].shadow;
   textShadow.style.textShadow = "2px 2px 2px " + songs[currentSong].shadow;
-  playMusic();
-  songIndex++;
 }
-function preMusic(currentSong) {
-  songImage.src = songs[currentSong].image;
-  music.src = songs[currentSong].link;
-  songName.innerHTML = songs[currentSong].name;
-  artist.innerHTML = songs[currentSong].artist;
-  boxShadow.style.boxShadow = "2px 2px 2px " + songs[currentSong].shadow;
-  textShadow.style.textShadow = "2px 2px 2px " + songs[currentSong].shadow;
-  playMusic();
-  songIndex--;
+
+function nextMusic() {
+  if (songIndex < totalSongs - 1) {
+    currentSong = songIndex + 1;
+    song(currentSong);
+    playMusic();
+    songIndex++;
+  } else {
+    songIndex = 0;
+    currentSong = 0;
+    song(currentSong);
+    playMusic();
+  }
 }
+function preMusic() {}
+
+// Next Button
 
 nextBtn.onclick = function () {
-  if (songIndex == 2) {
-    var currentSong = -1;
-    nextMusic(currentSong);
-  } else {
-    var currentSong = songIndex + 1;
-    nextMusic(currentSong);
-  }
+  nextMusic();
 };
 
+// Previous Button
+
 previousBtn.onclick = function () {
-  if (songIndex == -1) {
-    var currentSong = 2;
-    preMusic(currentSong);
-  } else {
-    var currentSong = songIndex - 1;
-    preMusic(currentSong);
-  }
+  PreMusic();
 };
+
+// Play music
 
 function playMusic() {
   playBtn.classList.replace("fa-play", "fa-pause");
@@ -84,16 +86,23 @@ function playMusic() {
   music.play();
 }
 
+// Pause music
+
 function pauseMusic() {
   playBtn.classList.replace("fa-pause", "fa-play");
   songName.classList.remove("anim");
   music.pause();
 }
 
-playBtn.onclick = function () {
+document.addEventListener("keydown", function (e) {
+  if (e.keyCode == 32) playPause();
+});
+playBtn.onclick = playPause;
+
+function playPause() {
   if (songName.classList.contains("anim")) {
     pauseMusic();
   } else {
     playMusic();
   }
-};
+}
