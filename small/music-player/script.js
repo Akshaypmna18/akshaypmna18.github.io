@@ -37,32 +37,43 @@ var songs = [
 ];
 
 var songIndex = 0;
+function nextMusic(currentSong) {
+  songImage.src = songs[currentSong].image;
+  music.src = songs[currentSong].link;
+  songName.innerHTML = songs[currentSong].name;
+  artist.innerHTML = songs[currentSong].artist;
+  boxShadow.style.boxShadow = "2px 2px 2px " + songs[currentSong].shadow;
+  textShadow.style.textShadow = "2px 2px 2px " + songs[currentSong].shadow;
+  playMusic();
+  songIndex++;
+}
+
 nextBtn.onclick = function () {
-  if (songIndex < 3) {
-    songImage.src = songs[songIndex + 1].image;
-    music.src = songs[songIndex + 1].link;
-    songName.innerHTML = songs[songIndex + 1].name;
-    artist.innerHTML = songs[songIndex + 1].artist;
-    boxShadow.style.boxShadow = "2px 2px 2px " + songs[songIndex + 1].shadow;
-    textShadow.style.textShadow = "2px 2px 2px " + songs[songIndex + 1].shadow;
-    music.play();
-    songIndex++;
+  if (songIndex == 2) {
+    var currentSong = -1;
+    nextMusic(currentSong);
   } else {
-    songIndex = 0;
+    var currentSong = songIndex + 1;
+    nextMusic(currentSong);
   }
 };
 
-var isPlaying = false;
+function playMusic() {
+  playBtn.classList.replace("fa-play", "fa-pause");
+  songName.classList.add("anim");
+  music.play();
+}
+
+function pauseMusic() {
+  playBtn.classList.replace("fa-pause", "fa-play");
+  songName.classList.remove("anim");
+  music.pause();
+}
+
 playBtn.onclick = function () {
-  if (isPlaying) {
-    isPlaying = false;
-    playBtn.classList.replace("fa-pause", "fa-play");
-    songName.classList.toggle("anim");
-    music.pause();
+  if (songName.classList.contains("anim")) {
+    pauseMusic();
   } else {
-    isPlaying = true;
-    playBtn.classList.replace("fa-play", "fa-pause");
-    songName.classList.toggle("anim");
-    music.play();
+    playMusic();
   }
 };
