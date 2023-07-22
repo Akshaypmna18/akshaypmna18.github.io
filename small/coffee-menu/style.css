@@ -30,14 +30,14 @@ header {
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  font-size: 3rem;
+  font-size: 1rem;
   font-weight: 800;
   font-family: "Stick No Bills", sans-serif;
 }
 
 i {
   margin-top: -0.75rem;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .hover-white:hover {
