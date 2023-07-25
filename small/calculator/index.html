@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Calculator</h1>
+        <div id="container">
+            <input type="text" id="input-box" autofocus>
+            <div class="row">
+                <button onclick="inputBox.value='' ">AC</button>
+                <button onclick="inputBox.value=inputBox.value.toString().slice(0,-1)">C</button>
+                <button onclick="inputBox.value += '.' ">.</button>
+                <button onclick="inputBox.value += '/' ">/</button>
+            </div>
+            <div class="row">
+                <button onclick="inputBox.value += '7' ">7</button>
+                <button onclick="inputBox.value += '8' ">8</button>
+                <button onclick="inputBox.value += '9' ">9</button>
+                <button onclick="inputBox.value += '*' ">*</button>
+            </div>
+            <div class="row">
+                <button onclick="inputBox.value += '4' ">4</button>
+                <button onclick="inputBox.value += '5' ">5</button>
+                <button onclick="inputBox.value += '6' ">6</button>
+                <button onclick="inputBox.value += '+' ">+</button>
+            </div>
+            <div class="row">
+                <button onclick="inputBox.value += '1' ">1</button>
+                <button onclick="inputBox.value += '2' ">2</button>
+                <button onclick="inputBox.value += '3' ">3</button>
+                <button onclick="inputBox.value += '-' ">-</button>
+            </div>
+            <div class="row">
+                <button onclick="inputBox.value += '0' ">0</button>
+                <button onclick="inputBox.value += '00' ">00</button>
+                <button onclick="inputBox.value= eval(inputBox.value);">=</button>
+            </div>
+        </div>
+
+        <script>
+            var inputBox = document.getElementById('input-box')
+
+            inputBox.addEventListener('keydown', function (e) {
+                if (e.keyCode == 13) { inputBox.value = eval(inputBox.value) }
+            })
+        </script>
+    </body>
+
+</html>
