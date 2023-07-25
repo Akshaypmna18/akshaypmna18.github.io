@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Card Hover</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="top-div" class="display-div">
+            <img src="https://t4.ftcdn.net/jpg/05/55/58/61/360_F_555586190_gYzAmpabFFA1ab2yyj24SsBYiA7EWWak.jpg"
+                alt="image">
+            <div id="text">
+                <p>Akshay K</p>
+                <p><small>akshaypmna</small></p>
+            </div>
+        </div>
+        <div id="container"></div>
+        <div id="bottom-div" class="display-div">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-message"></i>
+            <i class="fa-solid fa-bookmark"></i>
+        </div>
+
+        <script>
+            var container = document.getElementById('container')
+            var topDiv = document.getElementById('top-div')
+            var bottomDiv = document.getElementById('bottom-div')
+
+            container.addEventListener('mouseover', function () {
+                topDiv.classList.remove('display-div')
+                bottomDiv.classList.remove('display-div')
+            })
+            container.addEventListener('mouseout', function () {
+                topDiv.classList.add('display-div')
+                bottomDiv.classList.add('display-div')
+            })
+        </script>
+    </body>
+
+</html>

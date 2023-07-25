@@ -21,7 +21,6 @@ body {
   height: min(80%, 30rem);
   background-color: #fff;
   border: 1px solid #ccc;
-  box-shadow: 2px 2px 2px #e79099;
   border-radius: 8px;
   position: relative;
   display: flex;
@@ -35,7 +34,6 @@ body {
 h1 {
   margin: 0.5rem;
   letter-spacing: 0.1rem;
-  text-shadow: 2px 2px 2px #e79099;
 }
 
 #song-wrapper {

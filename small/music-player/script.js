@@ -1,7 +1,6 @@
 var playBtn = document.getElementById("btn");
 
 var boxShadow = document.querySelector("#container");
-var textShadow = document.getElementById("heading");
 
 var music = document.getElementById("music");
 var songName = document.getElementById("song-name");
@@ -40,40 +39,39 @@ var songs = [
 
 var totalSongs = songs.length;
 var songIndex = 0;
-var currentSong;
+var currentSong = songIndex;
 
 function song(currentSong) {
   songImage.src = songs[currentSong].image;
   music.src = songs[currentSong].link;
   songName.innerHTML = songs[currentSong].name;
   artist.innerHTML = songs[currentSong].artist;
-  boxShadow.style.boxShadow = "2px 2px 2px " + songs[currentSong].shadow;
-  textShadow.style.textShadow = "2px 2px 2px " + songs[currentSong].shadow;
+}
+
+function playSong(currentSong) {
+  song(currentSong);
+  playMusic();
 }
 
 function nextMusic() {
   if (songIndex < totalSongs - 1) {
     currentSong = songIndex + 1;
-    song(currentSong);
-    playMusic();
+    playSong(currentSong);
     songIndex++;
   } else {
     songIndex = 0;
     currentSong = 0;
-    song(currentSong);
-    playMusic();
+    playSong(currentSong);
   }
 }
 function preMusic() {
   if (songIndex <= 0) {
     songIndex = totalSongs - 1;
     currentSong = songIndex;
-    song(currentSong);
-    playMusic();
+    playSong(currentSong);
   } else {
     currentSong = songIndex - 1;
-    song(currentSong);
-    playMusic();
+    playSong(currentSong);
     songIndex--;
   }
 }
@@ -95,6 +93,7 @@ previousBtn.onclick = function () {
 function playMusic() {
   playBtn.classList.replace("fa-play", "fa-pause");
   songName.classList.add("anim");
+  boxShadow.style.boxShadow = "0 0 6px 2px " + songs[currentSong].shadow;
   music.play();
 }
 
@@ -103,8 +102,11 @@ function playMusic() {
 function pauseMusic() {
   playBtn.classList.replace("fa-pause", "fa-play");
   songName.classList.remove("anim");
+  boxShadow.style.boxShadow = "none";
   music.pause();
 }
+
+// Music play and pause
 
 document.addEventListener("keydown", function (e) {
   if (e.keyCode == 32) playPause();
