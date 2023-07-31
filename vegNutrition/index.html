@@ -259,6 +259,12 @@
                     dropdownIcon.classList.replace("fa-xmark", "fa-bars")
                 }
             })
+
+            var subLinks = document.getElementById("menu-link")
+            var links = document.getElementById('menu-items')
+            subLinks.addEventListener('click', function () {
+                links.style.display = links.style.display === "none" ? "block" : "none";
+            })
         </script>
     </body>
 
