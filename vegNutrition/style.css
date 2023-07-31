@@ -122,14 +122,6 @@ header nav > a {
   text-align: center;
 }
 
-#menu-items:hover {
-  display: block;
-}
-
-#menu-link:hover + #menu-items {
-  display: block;
-}
-
 #menu-link > i {
   margin: 2px 0 2px 2px;
 }
@@ -170,7 +162,8 @@ Steps-section
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 90vh;
+  height: 100%;
+  padding: 2rem 0;
   color: #fff;
 }
 
@@ -195,7 +188,6 @@ Steps-section
 }
 
 #steps-section i {
-  margin-top: 8rem;
   font-size: 5rem;
   transition: 0.5s;
 }
@@ -217,7 +209,8 @@ Store Section
 }
 
 #store-section .box {
-  height: 50vh;
+  height: 100%;
+  padding: 2rem 0;
 }
 
 #store-section .icon-wrapper {
@@ -228,7 +221,6 @@ Store Section
   aspect-ratio: 1;
   border-radius: 50%;
   margin: 0 auto;
-  margin-top: 8rem;
   display: grid;
   place-items: center;
 }
@@ -517,6 +509,14 @@ Mediaqueries
     margin-top: 0;
   }
 
+  #menu-items:hover {
+    display: block;
+  }
+
+  #menu-link:hover + #menu-items {
+    display: block;
+  }
+
   #menu-items > a:last-of-type {
     border-bottom: none;
   }
@@ -566,16 +566,12 @@ Mediaqueries
 
   #steps-section .box {
     width: 25%;
-    height: 100vh;
-    padding-top: 8rem;
+    height: 70vh;
+    padding-top: 3.5rem;
   }
 
   #steps-section .box * {
     margin: 0.5rem auto;
-  }
-
-  #steps-section i {
-    margin-top: 10rem;
   }
 
   #store-section .box-wrapper {
@@ -663,9 +659,5 @@ Mediaqueries
   h1,
   h2 {
     font-size: 2.75rem;
-  }
-
-  #steps-section .box {
-    height: 90vh;
   }
 }
