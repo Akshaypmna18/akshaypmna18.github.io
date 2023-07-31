@@ -162,7 +162,6 @@ Steps-section
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   padding: 4rem 0;
   color: #fff;
 }
@@ -209,8 +208,7 @@ Store Section
 }
 
 #store-section .box {
-  height: 100%;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 #store-section .icon-wrapper {
@@ -275,7 +273,7 @@ Review Section
 
 /* 
 Mail Section
-*/
+ */
 
 #mail-section {
   margin-top: 3rem;
@@ -412,7 +410,7 @@ form {
 
 /* 
 Footer
-*/
+ */
 
 footer {
   background-color: #232323;
@@ -566,8 +564,6 @@ Mediaqueries
 
   #steps-section .box {
     width: 25%;
-    height: 70vh;
-    padding-top: 3.5rem;
   }
 
   #steps-section .box * {
@@ -584,8 +580,6 @@ Mediaqueries
 
   #store-section .box {
     width: 25%;
-    height: 70vh;
-    padding-top: 4rem;
   }
 
   #store-section .box * {
