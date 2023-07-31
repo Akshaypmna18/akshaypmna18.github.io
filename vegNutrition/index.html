@@ -259,28 +259,6 @@
                     dropdownIcon.classList.replace("fa-xmark", "fa-bars")
                 }
             })
-
-            var subLinks = document.getElementById("menu-link")
-            var links = document.getElementById('menu-items')
-
-            function mouseOver() { links.style.display = links.style.display === "block" ? "none" : "block"; }
-            function mouseOut() { links.style.display = links.style.display === "none" ? "block" : "none"; }
-
-            subLinks.addEventListener('click', function () {
-                mouseOut()
-            })
-            subLinks.addEventListener('mouseover', function () {
-                mouseOver()
-            })
-            subLinks.addEventListener('mouseout', function () {
-                mouseOut()
-            })
-            links.addEventListener('mouseover', function () {
-                mouseOver()
-            })
-            links.addEventListener('mouseout', function () {
-                mouseOut()
-            })
         </script>
     </body>
 
