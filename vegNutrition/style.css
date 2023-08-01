@@ -94,10 +94,6 @@ header i {
   color: green;
 }
 
-header i:hover + nav {
-  display: block;
-}
-
 header nav {
   display: none;
   position: relative;
