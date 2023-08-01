@@ -30,10 +30,23 @@ a {
   text-align: center;
 }
 
+.center-item {
+  margin: 0 auto;
+}
+
+.color-white {
+  color: #fff;
+}
+
 .container {
   width: min(90%, 45rem);
   display: block;
   margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
 }
 
 .description-text {
@@ -103,23 +116,20 @@ header nav {
   top: 4rem;
   background-color: #fff;
   border-radius: 8px;
-  min-width: 12rem;
+  min-width: 14rem;
   margin-right: 1rem;
 }
 
 header nav > a {
   margin: 1rem;
   display: block;
-  text-align: center;
 }
 
 #menu-items {
-  border-radius: 8px;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
   margin-top: -1rem;
   display: none;
-  text-align: center;
 }
 
 #menu-link > i {
@@ -128,10 +138,8 @@ header nav > a {
 
 #menu-items > a {
   margin: 0.25rem 0.5rem;
-  padding: 0.5rem;
-  padding-bottom: 0;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   border-bottom: 1px solid #ccc;
-  display: block;
 }
 
 /* 
@@ -163,7 +171,6 @@ Steps-section
   flex-direction: column;
   align-items: center;
   padding: 4rem 0;
-  color: #fff;
 }
 
 #steps-section .box:nth-of-type(1) {
@@ -218,22 +225,14 @@ Store Section
   height: 8rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  margin: 0 auto;
-  display: grid;
-  place-items: center;
 }
 
 #store-section i {
-  color: #fff;
   font-size: 5rem;
 }
 
 #store-section .icon-wrapper:hover {
   transform: scale(1.1);
-}
-
-#store-section p {
-  margin: 0 auto;
 }
 
 /* 
@@ -263,12 +262,15 @@ Review Section
   height: 5rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  display: block;
   margin: 1rem auto;
 }
 
 #review-section .box p {
   font-style: italic;
+}
+
+#review-section h4 {
+  margin-top: 0.5rem;
 }
 
 /* 
@@ -281,7 +283,6 @@ Mail Section
 
 #mail-section img {
   width: 100%;
-  display: block;
 }
 
 #mail-wrapper {
@@ -302,8 +303,6 @@ Mail Section
   border: transparent;
   background-color: transparent;
   letter-spacing: 1px;
-  display: block;
-  margin: 0 auto;
 }
 
 #mail-section button {
@@ -311,11 +310,8 @@ Mail Section
   cursor: pointer;
   border: transparent;
   background-color: #f69dad;
-  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  display: block;
-  margin: 0 auto;
   border-radius: 8px;
 }
 
@@ -367,18 +363,12 @@ video-section
 
 #video-section iframe {
   width: min(95%, 50rem);
-  display: block;
-  margin: 0 auto;
   height: 50%;
 }
 
 /* 
 Contact Section            
 */
-
-#contact-section :where(.green-text, h2, h3) {
-  text-align: center;
-}
 
 #address-section,
 form {
@@ -388,7 +378,6 @@ form {
 #contact-section .input-box {
   margin-top: 1rem;
   padding: 1rem;
-  display: block;
   outline: none;
   border: 1px solid #e5e6ec;
   caret-color: #555;
@@ -403,9 +392,6 @@ form {
   border: transparent;
   border-radius: 8px;
   background-color: green;
-  color: #fff;
-  display: block;
-  margin: 0 auto;
 }
 
 /* 
@@ -414,9 +400,6 @@ Footer
 
 footer {
   background-color: #232323;
-  color: #fff;
-  display: grid;
-  place-items: center;
   margin-top: 1rem;
   height: 15vh;
 }
@@ -438,7 +421,7 @@ Mediaqueries
   }
 
   header nav {
-    min-width: 15rem;
+    min-width: 15.5rem;
   }
 
   #video-section {
@@ -470,6 +453,10 @@ Mediaqueries
 
   .green-text {
     font-size: 1.5rem;
+  }
+
+  .description-text {
+    font-size: 1rem;
   }
 
   .text {
@@ -508,10 +495,6 @@ Mediaqueries
   }
 
   #menu-items:hover {
-    display: block;
-  }
-
-  #menu-link:hover + #menu-items {
     display: block;
   }
 
