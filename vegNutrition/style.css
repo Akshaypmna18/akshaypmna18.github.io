@@ -273,7 +273,7 @@ Review Section
 
 /* 
 Mail Section
- */
+*/
 
 #mail-section {
   margin-top: 3rem;
@@ -410,7 +410,7 @@ form {
 
 /* 
 Footer
- */
+*/
 
 footer {
   background-color: #232323;
@@ -511,16 +511,16 @@ Mediaqueries
     display: block;
   }
 
+  #menu-link:hover + #menu-items {
+    display: block;
+  }
+
   #menu-items > a:last-of-type {
     border-bottom: none;
   }
 
   #menu-link > i {
     display: none;
-  }
-
-  #menu-link:hover + #menu-items {
-    display: block;
   }
 
   #review-section .box {
