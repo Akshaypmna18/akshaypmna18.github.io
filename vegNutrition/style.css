@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900");
-
 * {
   margin: 0;
   padding: 0;
@@ -10,17 +9,14 @@
 body {
   position: relative;
 }
-
 h1,
 h2 {
   font-size: 2rem;
   letter-spacing: 2px;
 }
-
 h3 {
   font-size: 1.8rem;
 }
-
 a {
   text-decoration: none;
   color: #333;
@@ -29,55 +25,44 @@ a {
 .center-align {
   text-align: center;
 }
-
 .center-item {
   margin: 0 auto;
 }
-
 .color-white {
   color: #fff;
 }
-
 .container {
   width: min(90%, 45rem);
   display: block;
   margin: 0 auto;
 }
-
-.grid {
-  display: grid;
-  place-items: center;
-}
-
 .description-text {
   font-size: 0.8rem;
 }
-
+.display {
+  display: block;
+}
+.heading {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 .gray-text {
   color: #555;
 }
-
 .green-text {
   font-size: 1.25rem;
   color: #91ac41;
   font-family: "Caveat", cursive;
 }
-
-.heading {
-  font-weight: 600;
-  letter-spacing: 1px;
+.grid {
+  display: grid;
+  place-items: center;
 }
-
 .pointer {
   cursor: pointer;
 }
-
 .text {
   font-size: 1rem;
-}
-
-.display {
-  display: block;
 }
 
 /* 
@@ -93,20 +78,17 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
 header img {
   height: 3.5rem;
   width: 3.5rem;
   filter: drop-shadow(2px 2px 4px #ccc);
   margin-left: 0.25rem;
 }
-
 header i {
   font-size: 2rem;
   margin-right: 0.75rem;
   color: green;
 }
-
 header nav {
   display: none;
   position: relative;
@@ -119,7 +101,6 @@ header nav {
   min-width: 14rem;
   margin-right: 1rem;
 }
-
 header nav > a {
   margin: 1rem;
   display: block;
@@ -131,15 +112,14 @@ header nav > a {
   margin-top: -1rem;
   display: none;
 }
-
-#menu-link > i {
-  margin: 2px 0 2px 2px;
-}
-
 #menu-items > a {
   margin: 0.25rem 0.5rem;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border-bottom: 1px solid #ccc;
+}
+
+#menu-link > i {
+  margin: 2px 0 2px 2px;
 }
 
 /* 
@@ -157,7 +137,6 @@ Landing Section
   align-items: center;
   justify-content: center;
 }
-
 #landing-section h1 {
   padding-top: 5rem;
 }
@@ -172,32 +151,25 @@ Steps-section
   align-items: center;
   padding: 4rem 0;
 }
-
 #steps-section .box:nth-of-type(1) {
   background-color: #5acda6;
 }
-
 #steps-section .box:nth-of-type(2) {
   background-color: #91ac41;
 }
-
 #steps-section .box:nth-of-type(3) {
   background-color: #e4b476;
 }
-
 #steps-section .box:nth-of-type(4) {
   background-color: #f69dad;
 }
-
 #steps-section:where(i, h2) {
   margin-bottom: 0.5rem;
 }
-
 #steps-section i {
   font-size: 5rem;
   transition: 0.5s;
 }
-
 #steps-section i:hover {
   transform: scale(1.2);
 }
@@ -209,15 +181,12 @@ Store Section
 #store-section {
   background-color: #f7eee2;
 }
-
 #store-section .green-text {
   padding-top: 5rem;
 }
-
 #store-section .box {
   padding: 3rem 0;
 }
-
 #store-section .icon-wrapper {
   background-color: #e3b375;
   transition: 0.5s;
@@ -226,11 +195,9 @@ Store Section
   aspect-ratio: 1;
   border-radius: 50%;
 }
-
 #store-section i {
   font-size: 5rem;
 }
-
 #store-section .icon-wrapper:hover {
   transform: scale(1.1);
 }
@@ -243,7 +210,6 @@ Review Section
   margin-top: 5rem;
   padding: 0 0.5rem;
 }
-
 #review-section .box {
   background-color: #f5f6fb;
   border-radius: 20%;
@@ -253,22 +219,18 @@ Review Section
   max-width: 20rem;
   height: 100%;
 }
-
 #review-section .box:hover {
   box-shadow: 4px 4px 4px #ccc;
 }
-
 #review-section img {
   height: 5rem;
   aspect-ratio: 1;
   border-radius: 50%;
   margin: 1rem auto;
 }
-
 #review-section .box p {
   font-style: italic;
 }
-
 #review-section h4 {
   margin-top: 0.5rem;
 }
@@ -280,9 +242,32 @@ Mail Section
 #mail-section {
   margin-top: 3rem;
 }
-
 #mail-section img {
   width: 100%;
+}
+#mail-section h2 {
+  padding-top: 2.5rem;
+}
+#mail-section input {
+  padding: 1rem;
+  outline: none;
+  border: transparent;
+  background-color: transparent;
+  letter-spacing: 1px;
+}
+#mail-section button {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: transparent;
+  background-color: #f69dad;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+#mail-section button:hover {
+  background-color: transparent;
+  color: #555;
+  border: 1px solid #f69dad;
 }
 
 #mail-wrapper {
@@ -293,34 +278,6 @@ Mail Section
   background-position: center;
 }
 
-#mail-section h2 {
-  padding-top: 2.5rem;
-}
-
-#mail-section input {
-  padding: 1rem;
-  outline: none;
-  border: transparent;
-  background-color: transparent;
-  letter-spacing: 1px;
-}
-
-#mail-section button {
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-  border: transparent;
-  background-color: #f69dad;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 8px;
-}
-
-#mail-section button:hover {
-  background-color: transparent;
-  color: #555;
-  border: 1px solid #f69dad;
-}
-
 /* 
 Stats-section
 */
@@ -328,16 +285,13 @@ Stats-section
 #stats-section {
   background-color: #f6fcfa;
 }
-
 #stats-section h2 {
   padding-top: 2rem;
 }
-
 #stats-section p {
   font-style: italic;
   color: #57e3b5;
 }
-
 #stats-section p:last-of-type {
   padding-bottom: 2rem;
 }
@@ -349,18 +303,15 @@ video-section
 #video-section {
   height: 50vh;
 }
-
 #video-section h2 {
   padding-top: 2rem;
 }
-
 #video-section div {
   background-color: #e4b476;
   margin: 1rem auto;
   height: 1px;
   width: min(40vw, 8rem);
 }
-
 #video-section iframe {
   width: min(95%, 50rem);
   height: 50%;
@@ -384,7 +335,6 @@ form {
   width: min(100%, 30rem);
   border-radius: 5px;
 }
-
 #contact-section button {
   padding: 0.5rem 1rem;
   text-transform: uppercase;
@@ -414,12 +364,10 @@ Mediaqueries
     width: 4rem;
     margin-left: 1rem;
   }
-
   header i {
     font-size: 2.25rem;
     margin-right: 1rem;
   }
-
   header nav {
     min-width: 15.5rem;
   }
@@ -427,7 +375,6 @@ Mediaqueries
   #video-section {
     height: 60vh;
   }
-
   #video-section iframe {
     height: 60%;
   }
@@ -442,11 +389,9 @@ Mediaqueries
   h2 {
     font-size: 2.25rem;
   }
-
   h2 {
     font-size: 2.2rem;
   }
-
   h3 {
     font-size: 1.9rem;
   }
@@ -454,11 +399,9 @@ Mediaqueries
   .green-text {
     font-size: 1.5rem;
   }
-
   .description-text {
     font-size: 1rem;
   }
-
   .text {
     font-size: 1.1rem;
   }
@@ -467,11 +410,9 @@ Mediaqueries
     height: 4.5rem;
     width: 4.5rem;
   }
-
   header i {
     visibility: hidden;
   }
-
   header nav {
     display: block;
     top: 0.5rem;
@@ -479,7 +420,6 @@ Mediaqueries
     background: transparent;
     margin-right: 0;
   }
-
   header nav > a {
     display: inline;
   }
@@ -493,11 +433,9 @@ Mediaqueries
     left: -2rem;
     margin-top: 0;
   }
-
   #menu-items:hover {
     display: block;
   }
-
   #menu-items > a:last-of-type {
     border-bottom: none;
   }
@@ -513,7 +451,6 @@ Mediaqueries
   #video-section {
     height: 80vh;
   }
-
   #video-section iframe {
     height: 70%;
   }
@@ -521,7 +458,6 @@ Mediaqueries
   #contact-section :where(.green-text, h2) {
     text-align: left;
   }
-
   #contact-section button {
     display: inline;
   }
@@ -544,11 +480,9 @@ Mediaqueries
   #steps-section {
     display: flex;
   }
-
   #steps-section .box {
     width: 25%;
   }
-
   #steps-section .box * {
     margin: 0.5rem auto;
   }
@@ -560,11 +494,9 @@ Mediaqueries
     gap: 1rem;
     margin: 0 auto;
   }
-
   #store-section .box {
     width: 25%;
   }
-
   #store-section .box * {
     margin: 0.5rem auto;
   }
@@ -576,7 +508,6 @@ Mediaqueries
     margin: 0.5rem auto;
     max-width: 85%;
   }
-
   #review-section .box {
     max-width: 20rem;
     margin: 0.5rem;
@@ -585,11 +516,9 @@ Mediaqueries
   #mail-section {
     display: flex;
   }
-
   #mail-section h2 {
     padding-top: 8rem;
   }
-
   #mail-section img {
     width: 70%;
     height: 90vh;
@@ -612,20 +541,18 @@ Mediaqueries
   #contact-section {
     display: flex;
   }
+  #contact-section h3 {
+    margin-top: 1rem;
+  }
 
   #address-section,
   form {
     padding: 3rem;
   }
 
-  #contact-section h3 {
-    margin-top: 1rem;
-  }
-
   #address-section p:nth-of-type(2) {
     line-height: 1.75;
   }
-
   #address-section p:nth-of-type(3),
   #address-section p:nth-of-type(4) {
     line-height: 2;
