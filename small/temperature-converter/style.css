@@ -9,7 +9,8 @@
 body {
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 95vh;
+  overflow: hidden;
 }
 
 #container {
@@ -39,7 +40,7 @@ select {
 
 input {
   padding: 0.5rem 1rem;
-  max-width: 12.5rem;
+  width: min(100%, 12.5rem);
 }
 
 p {

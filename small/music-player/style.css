@@ -9,11 +9,11 @@
 
 body {
   position: relative;
-  height: 95vh;
-  overflow: hidden;
   display: grid;
   place-items: center;
   background-color: #f6f6f6;
+  height: 95vh;
+  overflow: hidden;
 }
 
 #container {
