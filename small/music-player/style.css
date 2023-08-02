@@ -122,16 +122,16 @@ Media queries
 
 @media (min-height: 700px) {
   body {
-    padding-top: 8rem;
+    padding-top: 10rem;
   }
 }
 @media (min-height: 800px) {
   body {
-    padding-top: 10rem;
+    padding-top: 12rem;
   }
 }
 @media (min-height: 900px) {
   body {
-    padding-top: 12rem;
+    padding-top: 15rem;
   }
 }
