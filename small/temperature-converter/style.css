@@ -11,6 +11,7 @@ body {
   place-items: center;
   height: 95vh;
   overflow: hidden;
+  background-color: #f6f6f6;
 }
 
 #container {
@@ -36,6 +37,7 @@ select {
   padding-bottom: 0;
   border-bottom: 1px solid #555;
   outline: none;
+  background: transparent;
 }
 
 input {
@@ -46,4 +48,17 @@ input {
 p {
   margin-top: 0.2rem;
   text-align: center;
+}
+
+/* 
+Mediaquerries
+*/
+
+@media (min-width: 480px) {
+  #container {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px #ccc;
+  }
 }
