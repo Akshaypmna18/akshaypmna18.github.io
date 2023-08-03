@@ -55,6 +55,7 @@ header p {
   bottom: 0;
   text-align: center;
   color: #402218;
+  font-weight: 600;
 }
 header p:hover {
   background-color: #402218;
