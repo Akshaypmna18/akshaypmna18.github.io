@@ -47,21 +47,6 @@ i {
   color: #fff;
 }
 
-header p {
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  color: #402218;
-  font-weight: 600;
-}
-header p:hover {
-  background-color: #402218;
-  color: #fff;
-}
-
 /*
  Main
  */
@@ -73,6 +58,23 @@ main {
   justify-content: center;
   background-color: #ffebc9;
   position: relative;
+}
+
+main > p:first-of-type {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  position: sticky;
+  margin-top: -0.1rem;
+  top: 0;
+  text-align: center;
+  background-color: #c68b59;
+  color: #402218;
+  font-weight: 600;
+}
+main > p:first-of-type:hover {
+  background-color: #402218;
+  color: #fff;
 }
 
 main h2 {
