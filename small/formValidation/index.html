@@ -19,8 +19,8 @@
             <h1>Form Validation</h1>
 
             <div>
-                <input id="username" type="text" pattern="^[a-zA-Z_][a-zA-Z_\d$\-\.]{2,20}$" placeholder="Username"
-                    autofocus required>
+                <input id="username" type="text" pattern="^[a-zA-Z_][a-zA-Z_\d$\-\.]{2,20}$" maxlength="20"
+                    placeholder="Username" autofocus required>
                 <ul id="name-error">
                     <li class="error">Should start with alphabets or underscore(_)</li>
                     <li class="error">Should have at least 3 alphabets</li>
@@ -29,12 +29,12 @@
 
             <div>
                 <input title="Must be a valid email" type="email" placeholder="Email"
-                    pattern="[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,6}" required>
+                    pattern="[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,6}" maxlength="20" required>
             </div>
 
             <div>
                 <input id="password" title="Must be at least 8 characters" pattern="[a-zA-Z0-9.!@#$%^&*+_\-]{8,16}"
-                    type="password" placeholder="Password" required>
+                    type="password" placeholder="Password" maxlength="20" required>
                 <i id="eye" class="fa-solid fa-eye-slash"></i>
                 <ul id="password-error">
                     <li class="error">Should have at least 1 lowercase letter</li>
