@@ -34,22 +34,23 @@ password.addEventListener("blur", function () {
 password.addEventListener("input", function () {
   var input = password.value;
   errorMessages.forEach((error) => {
-    if (/[a-z]/.test(input)) {
-      errorMessages[2].style.display = "none";
-    }
-    if (/[A-Z]/.test(input)) {
-      errorMessages[3].style.display = "none";
-    }
-    if (/[!@#$%^&*_+=\-]/.test(input)) {
-      errorMessages[4].style.display = "none";
-    }
-    if (/[0-9]/.test(input)) {
-      errorMessages[5].style.display = "none";
-    }
-    if (/[a-zA-Z0-9!@#$%^&*_+=\-]{8}/.test(input)) {
-      errorMessages[6].style.display = "none";
-    }
+    error.style.display = "block";
   });
+  if (/[a-z]/.test(input)) {
+    errorMessages[2].style.display = "none";
+  }
+  if (/[A-Z]/.test(input)) {
+    errorMessages[3].style.display = "none";
+  }
+  if (/[!@#$%^&*_+=\-]/.test(input)) {
+    errorMessages[4].style.display = "none";
+  }
+  if (/[0-9]/.test(input)) {
+    errorMessages[5].style.display = "none";
+  }
+  if (/[a-zA-Z0-9!@#$%^&*_+=\-]{8}/.test(input)) {
+    errorMessages[6].style.display = "none";
+  }
 });
 eye.onclick = function () {
   if (eye.classList.contains("fa-eye-slash")) {
