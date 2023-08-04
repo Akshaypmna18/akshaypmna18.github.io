@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form validation</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <form>
+            <h1>Form Validation</h1>
+
+            <div>
+                <input id="username" type="text" pattern="^[a-zA-Z_][a-zA-Z_\d$\-\.]{2,20}$" placeholder="Username"
+                    autofocus required>
+                <ul id="name-error">
+                    <li class="error">Should start with alphabets or underscore(_)</li>
+                    <li class="error">Should have at least 3 alphabets</li>
+                </ul>
+            </div>
+
+            <div>
+                <input title="Must be a valid email" type="email" placeholder="Email"
+                    pattern="[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,6}" required>
+            </div>
+
+            <div>
+                <input id="password" title="Must be at least 8 characters" pattern="[a-zA-Z0-9.!@#$%^&*+_\-]{8,16}"
+                    type="password" placeholder="Password" required>
+                <i id="eye" class="fa-solid fa-eye-slash"></i>
+                <ul id="password-error">
+                    <li class="error">Should have at least 1 lowercase letter</li>
+                    <li class="error">Should have at least 1 uppercase letter</li>
+                    <li class="error">Should have at least 1 special character</li>
+                    <li class="error">Should have at least 1 number</li>
+                    <li class="error">Should have at least 8 chararcters</li>
+                </ul>
+            </div>
+
+            <div>
+                <input id="phone" type="text" pattern="^[0-9]{10,}" placeholder="Phone" inputmode="numeric"
+                    minlength="10" maxlength="16" required>
+                <ul id="phone-error">
+                    <li class="error">Invalid characters</li>
+                </ul>
+            </div>
+
+            <div><textarea placeholder="Message" minlength="15" required></textarea></div>
+
+            <button>submit</button>
+        </form>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
