@@ -87,12 +87,11 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   width: min(60%, 6.5rem);
-  color: #666;
+  color: #fff;
   border: 1px solid transparent;
 }
 
 button:hover {
-  color: #fff;
   border: 1px solid #fff;
   border-radius: 8px;
 }
