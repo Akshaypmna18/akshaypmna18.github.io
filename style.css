@@ -7,6 +7,11 @@
   font-family: "poppins", sans-serif;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 #star1 {
   width: 1px;
   height: 1px;
