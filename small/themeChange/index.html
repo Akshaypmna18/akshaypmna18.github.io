@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Complete Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="website icon" type="png" href="logo.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <img src="logo.png" alt="logo">
+                <i id="menu-icon" class="fa-solid fa-bars"></i>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Hire Me</a></li>
+                </ul>
+                <a href="#"><i id="theme-icon" class="fa-solid fa-moon"></i></a>
+            </nav>
+        </header>
+
+        <main>
+            <div id="img-wrapper">
+                <img src="princess.png" alt="ss">
+                <img src="pattern.png" alt="ss">
+            </div>
+            <div id="text-wrapper">
+                <h1>I'm <span>Kajal</span> Aggarwal</h1>
+                <p>This is my official portfolio website</p>
+                <button>Download CV</button>
+                <ul id="icon-wrapper">
+                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-behance"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-globe"></i></a></li>
+                </ul>
+            </div>
+        </main>
+
+        <script>
+            const menuIcon = document.getElementById('menu-icon')
+            const links = document.querySelector('nav>ul')
+            menuIcon.addEventListener('click', function () {
+                links.classList.toggle('display')
+                if (menuIcon.classList.contains("fa-bars")) {
+                    menuIcon.classList.replace("fa-bars", "fa-xmark")
+                }
+                else {
+                    menuIcon.classList.replace("fa-xmark", "fa-bars")
+                }
+            })
+
+            const themeIcon = document.getElementById('theme-icon')
+            themeIcon.addEventListener('click', function () {
+                document.body.classList.toggle('dark-theme')
+                if (themeIcon.classList.contains("fa-moon")) {
+                    themeIcon.classList.replace("fa-moon", "fa-sun")
+                }
+                else {
+                    themeIcon.classList.replace("fa-sun", "fa-moon")
+                }
+            })
+        </script>
+    </body>
+
+</html>
