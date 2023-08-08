@@ -77,7 +77,7 @@ nav a {
 }
 
 #theme-icon {
-  position: fixed;
+  position: absolute;
   top: 1.5rem;
   right: 4.5rem;
   font-size: 2rem;
@@ -224,10 +224,6 @@ main {
 
   nav a {
     margin: 1rem;
-  }
-
-  #theme-icon {
-    right: 6rem;
   }
 }
 
