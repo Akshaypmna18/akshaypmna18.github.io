@@ -244,3 +244,17 @@ main {
     margin-top: 8rem;
   }
 }
+
+@media (max-width: 770px) {
+  nav li {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.1s ease;
+  }
+
+  .transition {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(0.2s * var(--i));
+  }
+}
