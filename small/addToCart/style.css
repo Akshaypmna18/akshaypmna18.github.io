@@ -1,0 +1,46 @@
+* {
+  font-family: "rubik";
+  letter-spacing: 1px;
+}
+
+body {
+  height: 100dvh;
+  background-color: #f6f6f6;
+  user-select: none;
+}
+
+#container {
+  width: min(90dvw, 17rem);
+  border: 2px solid #222;
+  box-shadow: 4px 4px 4px #444;
+  background-color: #fff;
+}
+
+img {
+  height: 9rem;
+}
+
+input {
+  background-color: #ccc;
+  outline: none;
+  max-width: 90%;
+}
+
+button {
+  color: #f6f6f6;
+  background-color: #ac485a;
+}
+
+ul {
+  max-width: 90%;
+  list-style-type: none;
+}
+
+li {
+  border: 1px solid #ccc;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #f6f6f6;
+}
