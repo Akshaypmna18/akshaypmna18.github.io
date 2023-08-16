@@ -62,6 +62,7 @@ onValue(ListDb, function (snapshot) {
 input.on("keydown", function (e) {
   if (e.key == "Enter") {
     let inputValue = input.val().trim();
+    inputValue = inputValue.toLowerCase();
     if (existingItems.includes(inputValue)) {
       alert("Item already exists");
     } else {
@@ -74,6 +75,7 @@ input.on("keydown", function (e) {
 
 btn.on("click", function () {
   let inputValue = input.val().trim();
+  inputValue = inputValue.toLowerCase();
   if (existingItems.includes(inputValue)) {
     alert("Item already exists");
   } else {
