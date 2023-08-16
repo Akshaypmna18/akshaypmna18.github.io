@@ -4,7 +4,7 @@
 }
 
 body {
-  height: 100dvh;
+  min-height: 100dvh;
   background-color: #f6f6f6;
   user-select: none;
 }

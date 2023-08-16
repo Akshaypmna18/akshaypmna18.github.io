@@ -1,0 +1,7 @@
+{
+  "name": "Cart",
+  "shortname": "Cart",
+  "theme_color": "#eef0f4",
+  "background_color": "#eef0f4",
+  "display": "standalone"
+}
