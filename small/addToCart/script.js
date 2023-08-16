@@ -148,8 +148,8 @@ input.on("keydown", function (e) {
     if (inputValue) {
       // Check for duplicate value in existing items
       if (list.find(`li:contains(${inputValue})`).length === 0) {
-        appendItem([null, inputValue]);
-        pushItem([null, inputValue]);
+        appendItem(inputValue);
+        pushItem(inputValue);
         clearInput();
       } else {
         alert("Item already exists");
@@ -163,8 +163,8 @@ btn.on("click", function () {
   if (inputValue) {
     // Check for duplicate value in existing items
     if (list.find(`li:contains(${inputValue})`).length === 0) {
-      appendItem([null, inputValue]);
-      pushItem([null, inputValue]);
+      appendItem(inputValue);
+      pushItem(inputValue);
       clearInput();
     } else {
       alert("Item already exists");
