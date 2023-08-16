@@ -58,18 +58,34 @@ function pushItem(item) {
   if (item) push(ListDb, item);
 }
 
+let existingItems = [];
+
+onValue(ListDb, function (snapshot) {
+  if (snapshot.exists()) {
+    existingItems = Object.values(snapshot.val());
+  }
+});
+
 input.on("keydown", function (e) {
   if (e.key == "Enter") {
     let inputValue = input.val().trim();
-    appendItem(inputValue);
-    pushItem(inputValue);
-    clearInput();
+    if (existingItems.includes(inputValue)) {
+      alert("Item already exists");
+    } else {
+      appendItem(inputValue);
+      pushItem(inputValue);
+      clearInput();
+    }
   }
 });
 
 btn.on("click", function () {
   let inputValue = input.val().trim();
-  appendItem(inputValue);
-  pushItem(inputValue);
-  clearInput();
+  if (existingItems.includes(inputValue)) {
+    alert("Item already exists");
+  } else {
+    appendItem(inputValue);
+    pushItem(inputValue);
+    clearInput();
+  }
 });
