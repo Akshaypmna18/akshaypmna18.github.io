@@ -29,7 +29,8 @@ onValue(ListDb, function (snapshot) {
       appendItem(currentItem);
     }
   } else {
-    let blank = $("p").text("No items here...yet");
+    let blank = $("<p>").text("No items here...yet");
+    list.append(blank);
   }
 });
 
