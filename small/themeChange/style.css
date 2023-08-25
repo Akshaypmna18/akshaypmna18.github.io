@@ -173,8 +173,8 @@ main {
 }
 
 @media (min-width: 770px) {
-  nav > i {
-    visibility: hidden;
+  #menu-icon {
+    display: none;
   }
 
   nav > img {
@@ -182,12 +182,12 @@ main {
   }
 
   nav > ul {
-    visibility: visible;
+    display: flex;
     height: 1rem;
     flex-direction: row;
     top: 2.75rem;
     padding: 0;
-    margin-right: 2.5rem;
+    margin-right: 4rem;
   }
 
   #theme-icon {
@@ -208,7 +208,7 @@ main {
   #text-wrapper {
     position: absolute;
     float: left;
-    top: 13rem;
+    top: 6rem;
     padding-left: 2rem;
     font-size: 1.5rem;
   }
@@ -225,13 +225,13 @@ main {
   }
 
   nav ul {
-    margin-right: 2.5rem;
+    margin-right: 4.5rem;
   }
 }
 
 @media (min-width: 1200px) {
   nav > ul {
-    margin-right: 3rem;
+    margin-right: 4rem;
   }
 
   #img-wrapper {
