@@ -3,138 +3,114 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --primary-color: #fff;
   --secondary-color: #212121;
 }
-
 .dark-theme {
   --primary-color: #000106;
   --secondary-color: #fff;
 }
-
 body {
   position: relative;
   font-family: sans-serif;
   background-color: var(--primary-color);
-  min-height: 100dvh;
 }
-
 a {
   color: var(--secondary-color);
 }
-
 a:hover,
 i:hover {
   color: #ff4321;
 }
-
 header {
+  height: 12vh;
   position: relative;
 }
-
 nav {
   position: relative;
 }
-
 nav > img {
   height: 4rem;
   margin: 0.5rem 0 0 1rem;
 }
-
 nav > i {
   font-size: 2rem;
   position: absolute;
-  right: 1rem;
+  right: 1.5rem;
   top: 1.5rem;
   color: var(--secondary-color);
   cursor: pointer;
-  z-index: 3;
+  z-index: 2;
 }
-
 nav > ul {
+  visibility: hidden;
   background-color: var(--primary-color);
-  display: none;
   position: absolute;
   top: 0;
   right: 0;
-  list-style-type: none;
-  text-align: center;
-  z-index: 2;
-  height: 100dvh;
+  height: 100vh;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 10rem 2rem;
   gap: 1rem;
-  padding: 0 3rem;
+  list-style-type: none;
+  z-index: 1;
 }
-
 nav a {
   text-decoration: none;
-  font-weight: 600;
   text-transform: uppercase;
+  margin: 0.25rem 0.5rem;
+  font-weight: 600;
 }
-
 #theme-icon {
   position: absolute;
   top: 1.5rem;
-  right: 3.75rem;
+  right: 4.5rem;
   font-size: 2rem;
   z-index: 2;
 }
-
 main {
   position: relative;
-  margin-top: 4rem;
 }
-
 #img-wrapper {
   position: relative;
+  margin: 2rem auto;
   width: min(95%, 15.5rem);
   height: 18rem;
-  margin: 0 auto;
 }
-
 #img-wrapper img {
   display: block;
   height: 100%;
+  overflow: hidden;
   transition: 0.3s linear;
-  position: absolute;
 }
-
 #img-wrapper:hover {
   transform: scale(1.1);
 }
-
 #img-wrapper > img:first-of-type {
   height: 120%;
   position: absolute;
-  z-index: 1;
+  top: -5.75rem;
+  margin: 2rem auto;
 }
-
 #img-wrapper > img:nth-of-type(2) {
-  top: 3.75rem;
+  margin: 5rem auto 2rem auto;
 }
-
 #text-wrapper {
   width: 95%;
   margin: 0 auto;
-  margin-top: 5rem;
 }
-
 #text-wrapper h1 {
   color: var(--secondary-color);
 }
-
 #text-wrapper span {
   color: #ff4321;
 }
-
 #text-wrapper p {
   color: var(--secondary-color);
 }
-
 #text-wrapper button {
   color: var(--primary-color);
   background-color: var(--secondary-color);
@@ -147,109 +123,100 @@ main {
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
 }
-
 #text-wrapper button:hover {
   scale: 1.05;
 }
-
 #icon-wrapper {
   margin: 0.5rem 0;
   list-style-type: none;
   font-size: 1.5rem;
   display: flex;
 }
-
 #icon-wrapper a {
   margin: 0 0.5rem;
 }
-
 .display {
-  display: flex;
+  visibility: visible;
 }
-
 @media (min-width: 480px) {
   #text-wrapper {
     font-size: 1.25rem;
   }
 }
-
 @media (min-width: 770px) {
-  #menu-icon {
-    display: none;
+  nav > i {
+    visibility: hidden;
   }
-
-  main {
-    margin-top: 3rem;
-  }
-
   nav > img {
     margin: 1rem 0 0 1.5rem;
   }
-
   nav > ul {
-    display: flex;
+    visibility: visible;
     height: 1rem;
     flex-direction: row;
     top: 2.75rem;
     padding: 0;
-    margin-right: 4rem;
+    margin-right: 2.5rem;
   }
-
   #theme-icon {
     right: 0.5rem;
     top: 2rem;
   }
-
   #img-wrapper {
     float: right;
     margin-right: 3rem;
     height: 20rem;
   }
-
   #img-wrapper img:first-of-type {
     top: -0.75rem;
   }
-
   #text-wrapper {
     position: absolute;
     float: left;
-    top: 6rem;
+    top: 13rem;
     padding-left: 2rem;
     font-size: 1.5rem;
   }
-
   #icon-wrapper {
     margin-top: 4.5rem;
   }
 }
-
 @media (min-width: 1025px) {
   body {
     width: 85%;
     margin: 0 auto;
   }
-
   nav ul {
-    margin-right: 4.5rem;
+    margin-right: 2.5rem;
   }
 }
-
 @media (min-width: 1200px) {
   nav > ul {
-    margin-right: 4rem;
+    margin-right: 3rem;
   }
-
   #img-wrapper {
     height: 27rem;
     margin-top: -1rem;
     margin-right: 10rem;
   }
-
   #text-wrapper {
     font-size: 1.75rem;
   }
-
   #icon-wrapper {
     margin-top: 8rem;
+  }
+}
+
+@media (max-width: 770px) {
+  nav li {
+    opacity: 0;
+    transform: translateX(20%);
+    transition: all 0.1s ease;
+  }
+
+  .transition {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(0.2s * var(--i));
   }
 }
