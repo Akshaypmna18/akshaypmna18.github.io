@@ -1,11 +1,7 @@
 const menuIcon = document.getElementById("menu-icon");
 const links = document.querySelector("nav>ul");
-const listItems = document.querySelectorAll("nav li");
 menuIcon.addEventListener("click", function () {
   links.classList.toggle("display");
-  for (let i = 0; i < listItems.length; i++) {
-    listItems[i].classList.toggle("transition");
-  }
   if (menuIcon.classList.contains("fa-bars")) {
     menuIcon.classList.replace("fa-bars", "fa-xmark");
   } else {

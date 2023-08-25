@@ -31,7 +31,6 @@ i:hover {
 }
 
 header {
-  height: 12dvh;
   position: relative;
 }
 
@@ -51,29 +50,30 @@ nav > i {
   top: 1.5rem;
   color: var(--secondary-color);
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 }
 
 nav > ul {
-  visibility: hidden;
   background-color: var(--primary-color);
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10rem 2rem;
-  gap: 1rem;
   list-style-type: none;
-  z-index: 1;
+  text-align: center;
+  z-index: 2;
+  height: 100dvh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 3rem;
 }
 
 nav a {
   text-decoration: none;
-  text-transform: uppercase;
-  margin: 0.25rem 0.5rem;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 #theme-icon {
@@ -90,16 +90,16 @@ main {
 
 #img-wrapper {
   position: relative;
-  margin: 2rem auto;
   width: min(95%, 15.5rem);
   height: 18rem;
+  margin: 0 auto;
 }
 
 #img-wrapper img {
   display: block;
   height: 100%;
-  overflow: hidden;
   transition: 0.3s linear;
+  position: absolute;
 }
 
 #img-wrapper:hover {
@@ -109,17 +109,17 @@ main {
 #img-wrapper > img:first-of-type {
   height: 120%;
   position: absolute;
-  top: -5.75rem;
-  margin: 2rem auto;
+  z-index: 1;
 }
 
 #img-wrapper > img:nth-of-type(2) {
-  margin: 5rem auto 2rem auto;
+  top: 3.75rem;
 }
 
 #text-wrapper {
   width: 95%;
   margin: 0 auto;
+  margin-top: 5rem;
 }
 
 #text-wrapper h1 {
@@ -163,7 +163,7 @@ main {
 }
 
 .display {
-  visibility: visible;
+  display: flex;
 }
 
 @media (min-width: 480px) {
@@ -246,19 +246,5 @@ main {
 
   #icon-wrapper {
     margin-top: 8rem;
-  }
-}
-
-@media (max-width: 770px) {
-  nav li {
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all 0.1s ease;
-  }
-
-  .transition {
-    opacity: 1;
-    transform: translateX(0);
-    transition-delay: calc(0.1s * var(--i));
   }
 }
