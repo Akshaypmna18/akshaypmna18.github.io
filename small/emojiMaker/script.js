@@ -41,3 +41,9 @@ $("#right-toggle").click(toggleSectionsForward);
 $("#left-toggle").click(toggleSectionsBackward);
 
 updateToggleButtons();
+
+const btn = $(".btn");
+btn.on("click", function () {
+  $("#emoji-box").get(0).requestFullscreen();
+  $("#emoji-box>h2").text("Your Emoji");
+});

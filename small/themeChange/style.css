@@ -18,7 +18,7 @@ body {
   position: relative;
   font-family: sans-serif;
   background-color: var(--primary-color);
-  /* min-height: 100dvh; */
+  min-height: 100dvh;
 }
 
 a {
@@ -98,7 +98,7 @@ main {
 
 #img-wrapper img {
   display: block;
-  height: 100%;
+  min-height: 100dvh;
   overflow: hidden;
   transition: 0.3s linear;
 }

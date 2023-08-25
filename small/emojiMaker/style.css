@@ -77,3 +77,17 @@ i {
   cursor: pointer;
   font-size: 1.5rem;
 }
+
+#emoji-box:fullscreen {
+  height: 100dvh;
+  width: 100dvh;
+}
+
+#emoji-box:fullscreen > #emoji {
+  scale: 2;
+}
+
+#emoji-box:fullscreen > h2 {
+  font-size: 3rem;
+  padding-bottom: 4rem;
+}
