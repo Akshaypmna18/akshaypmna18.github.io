@@ -86,6 +86,7 @@ nav a {
 
 main {
   position: relative;
+  margin-top: 4rem;
 }
 
 #img-wrapper {
@@ -175,6 +176,10 @@ main {
 @media (min-width: 770px) {
   #menu-icon {
     display: none;
+  }
+
+  main {
+    margin-top: 3rem;
   }
 
   nav > img {
