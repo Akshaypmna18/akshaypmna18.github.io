@@ -19,8 +19,6 @@ body {
   font-family: sans-serif;
   background-color: var(--primary-color);
   min-height: 100dvh;
-  overflow: hidden;
-  overflow-y: auto;
 }
 
 a {
