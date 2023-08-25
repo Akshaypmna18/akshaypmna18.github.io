@@ -83,6 +83,7 @@ function resetState() {
     $(answersList[0].firstChild).remove();
   }
   nextBtn.text("NEXT");
+  question.removeClass("text-center");
 }
 
 function selectAnswer() {
@@ -105,6 +106,7 @@ function selectAnswer() {
 function showScore() {
   resetState();
   question.text("Your scored " + score + " Out of " + questions.length + " !");
+  question.addClass("text-center");
   nextBtn.removeClass("d-none");
   nextBtn.text("Play Again");
 }
