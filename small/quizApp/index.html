@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="website icon" href="quiz-app-favicon.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Quiz App</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                letter-spacing: 1px;
+                user-select: none;
+            }
+
+            body {
+                background-color: #f6f6f6;
+            }
+
+            #container {
+                background-color: #fff;
+                width: min(95%, 40rem);
+                border: 1px solid #000;
+                box-shadow: 3px 3px 3px #ccc;
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="text-center fw-bold display-1 mt-5 mb-2">Quiz App</h1>
+
+        <div id="container" class="mx-auto mt-5 rounded-2 p-3">
+            <h2 id="question" class="fs-2">Question</h2>
+            <div id="answers">
+            </div>
+            <button id="next" class="btn btn-dark d-block mx-auto fs-4 px-4 mt-2 text-uppercase d-none">Next</button>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
