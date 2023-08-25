@@ -614,10 +614,11 @@ a {
   text-transform: capitalize;
   color: brown;
   font-size: 1rem;
+  transition: all 0.3s;
 }
 
 a:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #box-wrapper:hover a:not(:hover) {

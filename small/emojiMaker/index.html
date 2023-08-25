@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emoji Maker</title>
+        <link rel="website icon"
+            href="https://static.vecteezy.com/system/resources/thumbnails/024/125/562/small/cute-emoji-with-line-style-free-png.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="text-center text-capitalize d-flex flex-column justify-content-center align-items-center">
+        <h1 class="display-1 fw-bold mb-2">Emoji Maker</h1>
+
+        <main class="d-sm-flex justify-content-center align-items-center mt-sm-5">
+
+            <div id="wrapper" class="card d-flex flex-row align-items-center p-sm-2 mx-2">
+                <i id="left-toggle" class="fa-solid fa-chevron-left mt-4"></i>
+
+                <div id="color-box" class="d-flex flex-column align-items-center justify-content-center p-2">
+                    <h2 class="h1 my-2">Select Color</h2>
+                    <div id="color-wrapper" class="d-flex justify-content-center align-items-center gap-2 mt-2 mb-4">
+                        <div class="emoji-border" style="background-color: red;" onclick="changeBg('red')"></div>
+                        <div class="emoji-border" style="background-color: yellow;" onclick="changeBg('yellow')"></div>
+                        <div class="emoji-border" style="background-color: green;" onclick="changeBg('green')"></div>
+                    </div>
+                </div>
+
+                <div id="eyes-box" class="d-none flex align-items-center justify-content-center p-2">
+                    <h2 class="h1 my-2">Select eyes</h2>
+                    <div id="eyes-wrapper" class="d-flex justify-content-center align-items-center gap-2 mt-2 mb-4">
+                        <div
+                            class="image-box row-cols-4 d-flex justify-content-center align-items-center flex-wrap gap-2">
+                            <div class="col"><img src="eyes1.png" alt="" onclick="changeEyes('eyes1.png')"></div>
+                            <div class="col"><img src="eyes2.png" alt="" onclick="changeEyes('eyes2.png')"></div>
+                            <div class="col"><img src="eyes3.png" alt="" onclick="changeEyes('eyes3.png')"></div>
+                            <div class="col"><img src="eyes4.png" alt="" onclick="changeEyes('eyes4.png')"></div>
+                            <div class="col"><img src="eyes5.png" alt="" onclick="changeEyes('eyes5.png')"></div>
+                            <div class="col"><img src="eyes6.png" alt="" onclick="changeEyes('eyes6.png')"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mouth-box" class="d-none flex-column align-items-center justify-content-center p-2">
+                    <h2 class="h1 my-2">Select Mouth</h2>
+                    <div id="eyes-wrapper" class="d-flex justify-content-center align-items-center gap-2 mt-2 mb-4">
+                        <div
+                            class="image-box row-cols-4 d-flex justify-content-center align-items-center flex-wrap gap-2">
+                            <div class="col"><img src="mouth1.png" alt="" onclick="changeMouth('mouth1.png')"></div>
+                            <div class="col"><img src="mouth2.png" alt="" onclick="changeMouth('mouth2.png')"></div>
+                            <div class="col"><img src="mouth3.png" alt="" onclick="changeMouth('mouth3.png')"></div>
+                            <div class="col"><img src="mouth4.png" alt="" onclick="changeMouth('mouth4.png')"></div>
+                            <div class="col"><img src="mouth5.png" alt="" onclick="changeMouth('mouth5.png')"></div>
+                            <div class="col"><img src="mouth6.png" alt="" onclick="changeMouth('mouth6.png')"></div>
+                        </div>
+                    </div>
+                </div>
+                <i id="right-toggle" class="fa-solid fa-chevron-right mt-4"></i>
+            </div>
+
+            <div id="emoji-box" class="card d-flex align-items-center justify-content-center m-3 mt-4 ms-sm-4 p-2 py-2">
+                <h2 class="h1 my-2">emoji</h2>
+                <div id="emoji" class="emoji-border mx-auto">
+                    <img id="emoji-eyes" src="eyes1.png" alt="eyes">
+                    <img id="emoji-mouth" src="mouth1.png" alt="mouth">
+                </div>
+            </div>
+
+        </main>
+
+        <button class="btn btn-outline-success text-uppercase fw-bold my-2 fs-5">submit</button>
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
