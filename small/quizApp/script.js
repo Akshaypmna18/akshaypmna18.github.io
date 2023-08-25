@@ -79,9 +79,7 @@ function showQuestion() {
 
 function resetState() {
   nextBtn.addClass("d-none");
-  while (answersList[0].firstChild) {
-    $(answersList[0].firstChild).remove();
-  }
+  answersList.empty();
   nextBtn.text("NEXT");
   question.removeClass("text-center");
 }
