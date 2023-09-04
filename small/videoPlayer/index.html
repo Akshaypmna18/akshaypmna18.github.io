@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Video Player</title>
+        <link rel="website icon"
+            href="https://toppng.com/uploads/preview/play-video-button-icon-11549836032qcp1wozchi.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <body>
+            <h1 class="display-1 fw-bold text-center mt-3">Video Player</h1>
+
+            <div class="container mt-4">
+                <div class="row mt-3">
+                    <div id="main-video" class="col-md-7 ms-md-5">
+                        <video class="img-fluid rounded"
+                            src="https://veed-assets.b-cdn.net/videos/Julio%20carvajal/Veed%20Iceland%206.mp4" controls
+                            muted autoplay></video>
+                        <h3 class="fs-3 ms-2 mt-1">01 Video Title</h3>
+                        <p class="p-2 pe-md-5 ps-md-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                            impedit
+                            at
+                            saepe
+                            aut
+                            totam, quaerat
+                            modi accusantium molestiae quae veritatis id reiciendis perspiciatis nam accusamus dolores
+                            voluptatem, laborum debitis similique.</p>
+                    </div>
+
+                    <div id="video-list" class="col-md-4">
+                        <div class="active video mb-2 d-flex align-items-center rounded">
+                            <video class="img-fluid rounded"
+                                src="https://veed-assets.b-cdn.net/videos/Julio%20carvajal/Veed%20Iceland%206.mp4"></video>
+                            <h3 class="fs-3 ms-2 mt-1">01 Video Title</h3>
+                        </div>
+                        <div class="video mb-2 d-flex align-items-center rounded">
+                            <video class="img-fluid rounded"
+                                src="https://veed-assets.b-cdn.net/videos/4.Veed%20Iceland%2011.mp4"></video>
+                            <h3 class="fs-3 ms-2 mt-1">02 Video Title</h3>
+                        </div>
+                        <div class="video mb-2 d-flex align-items-center rounded">
+                            <video class="img-fluid rounded"
+                                src="https://veed-assets.b-cdn.net/videos/3.Veed%20Iceland%20Drone%204.mp4"></video>
+                            <h3 class="fs-3 ms-2 mt-1">03 Video Title</h3>
+                        </div>
+                        <div class="video mb-2 d-flex align-items-center rounded">
+                            <video class="img-fluid rounded"
+                                src="https://veed-assets.b-cdn.net/videos/Finbar%20Somers/Bee%20on%20flower.mp4"></video>
+                            <h3 class="fs-3 ms-2 mt-1">04 Video Title</h3>
+                        </div>
+                        <div class="video mb-2 d-flex align-items-center rounded">
+                            <video class="img-fluid rounded"
+                                src="https://veed-assets.b-cdn.net/videos/Finbar%20Somers/Pigeons%20sat%20on%20a%20branch%20reflecting%20on%20existence.mp4"></video>
+                            <h3 class="fs-3 ms-2 mt-1">05 Video Title</h3>
+                        </div>
+                        <div class="video mb-2 d-flex align-items-center rounded">
+                            <video class="img-fluid rounded"
+                                src="https://veed-assets.b-cdn.net/videos/Mikhail%20Nilov/couple%20with%20bike_4k_aero%20-%206.mp4"
+                                muted></video>
+                            <h3 class="fs-3 ms-2 mt-1">06 Video Title</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                let mainVideo = $('#main-video')
+                let title = $('#main-video h3')
+
+                $('.video').click(function () {
+                    $('.video').removeClass('active');
+                    $(this).addClass('active')
+                    if ($(this).hasClass('active')) {
+                        let src = $(this).children('video').attr('src');
+                        mainVideo.find('video').attr('src', src)
+                        let text = $(this).children('h3').text()
+                        mainVideo.find('h3').text(text)
+                    }
+                })
+            </script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+    </body>
+
+</html>

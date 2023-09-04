@@ -1,0 +1,52 @@
+body {
+  background-color: #f6f6f6;
+}
+
+.container {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.video {
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.video:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+.active {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.active:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.video video {
+  width: 40%;
+}
+
+@media (min-width: 768px) {
+  #video-list {
+    height: 70dvh;
+    overflow-y: scroll;
+  }
+
+  #video-list::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 8px;
+  }
+
+  #video-list::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #444;
+  }
+}
