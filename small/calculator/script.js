@@ -1,8 +1,16 @@
 const inputBox = $(".input-box");
 const number = $(".number");
 
+let lastInputIsOperator = false;
+
 $(".number").on("click", function () {
   let inputValue = $(this).text().trim();
+  if (isOperator(inputValue)) {
+    if (lastInputIsOperator) return;
+    lastInputIsOperator = true;
+  } else {
+    lastInputIsOperator = false;
+  }
   inputBoxUpdate(inputValue);
 });
 
@@ -17,4 +25,9 @@ function inputBoxUpdate(inputValue) {
   } else {
     inputBox.val(currentInput + inputValue);
   }
+}
+
+function isOperator(input) {
+  const operators = ["+", "-", "*", "/", "%", "."];
+  return operators.includes(input);
 }
