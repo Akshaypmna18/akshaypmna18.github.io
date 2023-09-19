@@ -1,2 +1,2 @@
 # akshaypmna18.github.io
-Sample Projects
+My Projects
