@@ -1,0 +1,283 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #f6f6f6;
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 0.1px;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 8px;
+}
+
+a:hover,
+header i:hover,
+li:hover {
+  color: #666;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* 
+  Header
+  */
+
+header {
+  min-height: 11dvh;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+}
+
+header img {
+  height: 4rem !important;
+}
+
+header i {
+  color: #222;
+}
+
+header i:hover,
+i:active {
+  color: #666;
+}
+
+button.navbar-toggler:focus {
+  outline: none !important;
+}
+
+header ul {
+  background-color: #fff;
+}
+
+nav li {
+  border-bottom: 1px solid #ccc;
+}
+nav li:last-of-type {
+  border-bottom: transparent;
+}
+
+li {
+  letter-spacing: 1px;
+}
+
+/* 
+  Main
+  */
+
+#about-section img:first-of-type,
+#about-section div > p {
+  width: min(95%, 40rem);
+}
+
+/* Landing page */
+
+#landing-section h1 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#landing-section img:nth-of-type(2) {
+  scale: 0.78;
+}
+
+#img-wrapper img {
+  width: min(95%, 22rem);
+}
+
+#img-wrapper img:first-of-type {
+  transform: scaleX(-1);
+}
+
+/* Services Page */
+
+#services-section .card {
+  transition: all 0.2s linear;
+}
+
+#services-section .card:hover {
+  scale: 1.05;
+  z-index: 1;
+}
+
+/* 
+  contact-section
+  */
+
+#contact-section iframe {
+  transition: all 0.3s linear;
+  width: min(90%, 30rem);
+  aspect-ratio: 2/1;
+}
+
+#contact-section .card {
+  width: min(90%, 20rem);
+  transition: all 0.3s linear;
+}
+
+#contact-section .card:hover,
+iframe:hover {
+  scale: 1.05;
+}
+
+/* 
+  Footer
+  */
+
+footer {
+  background-color: #222;
+  color: #fff;
+  min-height: 12dvh;
+}
+
+/*
+   SCROLL ANIMATIONS
+   */
+
+section {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show-section {
+  opacity: 1;
+}
+
+.card {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show-card {
+  filter: blur(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+  section {
+    transition: none;
+  }
+  .card {
+    transition: none;
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.scale-up-center {
+  animation: scale-up-center 0.75s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-top {
+  animation: slide-top 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tracking-in-expand {
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.tracking-in-contract-bck {
+  animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+}
+
+/* 
+  Mediaqueries
+  */
+
+@media (min-width: 576px) {
+  header ul {
+    background-color: transparent;
+  }
+  header li {
+    border-bottom: none;
+  }
+  #services-section .card:nth-child(even) {
+    transition-delay: 200ms;
+  }
+}
+
+@media (min-width: 768px) {
+  #services .card {
+    max-width: 8rem;
+    height: 9rem;
+  }
+  #services-section .card:nth-child(2),
+  #services-section .card:nth-child(5) {
+    transition-delay: 400ms;
+  }
+
+  #services-section .card:nth-child(3),
+  #services-section .card:nth-child(6) {
+    transition-delay: 800ms;
+  }
+  #services {
+    max-width: 30rem;
+  }
+  #contact-section iframe {
+    height: 18rem;
+  }
+  #contact-section .d-flex {
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #contact-section iframe {
+    width: 40rem;
+    height: 25rem;
+  }
+}
