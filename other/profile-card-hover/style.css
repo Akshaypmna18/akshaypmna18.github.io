@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #444;
+  background-color: #333;
   display: grid;
   place-items: center;
   position: relative;
@@ -84,7 +84,7 @@ p {
 
 .card-back {
   transform: rotateY(180deg);
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url("https://s.ndtvimg.com/images/entities/300/virat-kohli-967.png");
   background-repeat: no-repeat;
   background-size: contain;

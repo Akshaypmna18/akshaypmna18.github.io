@@ -1,0 +1,23 @@
+.pointer {
+  cursor: pointer;
+}
+
+/* 
+Header
+*/
+
+header {
+  min-height: 12dvh;
+}
+
+header img {
+  max-width: 4rem;
+}
+
+header i:hover {
+  color: #fff !important;
+}
+
+header div:last-of-type {
+  height: 100dvh;
+}
