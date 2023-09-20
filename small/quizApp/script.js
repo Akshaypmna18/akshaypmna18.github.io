@@ -54,12 +54,15 @@ const continueBtn = $("#continue-btn");
 const exitBtn = $("#exit-btn");
 const exitQuizBtn = $("#exit-quiz-btn");
 const container = $("#container");
-const btnContainer = $("#btn-container");
+const startBtnContainer = $("#start-btn-container");
 const rulesContainer = $("#rules-container");
 const heading = $("#heading");
+const timeLeft = $("#time-left");
+const time = $("#time-left > span");
+const btnWrapper = $("#btn-wrapper");
 
 function startQuizPage() {
-  btnContainer.removeClass("d-none");
+  startBtnContainer.removeClass("d-none");
   rulesContainer.addClass("d-none");
 }
 
@@ -70,7 +73,7 @@ exitQuizBtn.on("click", function () {
 });
 
 startBtn.on("click", function () {
-  btnContainer.addClass("d-none");
+  startBtnContainer.addClass("d-none");
   rulesContainer.removeClass("d-none");
 });
 
@@ -94,11 +97,30 @@ function quiz() {
   showQuestion();
 }
 
+let countDown = 10;
+let timerInterval;
+
+function startTimer() {
+  time.text(countDown + "s");
+  countDown--;
+
+  if (countDown < 0) {
+    clearInterval(timerInterval);
+    countDown = 10;
+    handleNextBtn();
+  }
+}
+
+function timer() {
+  timerInterval = setInterval(startTimer, 1000);
+}
+
 function showQuestion() {
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
   let questionNum = currentQuestionIndex + 1;
   question.text(questionNum + "." + currentQuestion.question + " ?");
+  timer();
 
   currentQuestion.answers.forEach((answers) => {
     const button = $("<button>")
@@ -118,6 +140,10 @@ function resetState() {
   exitQuizBtn.addClass("d-none");
   nextBtn.text("NEXT").addClass("btn-dark").removeClass("btn-success");
   question.removeClass("text-center");
+  timeLeft.removeClass("d-none");
+  btnWrapper
+    .addClass("justify-content-between")
+    .removeClass("justify-content-center");
 }
 
 function selectAnswer() {
@@ -145,6 +171,10 @@ function showScore() {
   nextBtn.removeClass("btn-dark").addClass("btn-success");
   nextBtn.text("Play Again");
   exitQuizBtn.removeClass("d-none");
+  timeLeft.addClass("d-none");
+  btnWrapper
+    .removeClass("justify-content-between")
+    .addClass("justify-content-center");
 }
 
 function handleNextBtn() {
