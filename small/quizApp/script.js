@@ -48,7 +48,42 @@ const questions = [
 
 const question = $("#question");
 const answersList = $("#answers");
-const nextBtn = $("#next");
+const nextBtn = $("#next-btn");
+const startBtn = $("#start-btn");
+const continueBtn = $("#continue-btn");
+const exitBtn = $("#exit-btn");
+const exitQuizBtn = $("#exit-quiz-btn");
+const container = $("#container");
+const btnContainer = $("#btn-container");
+const rulesContainer = $("#rules-container");
+const heading = $("#heading");
+
+function startQuizPage() {
+  btnContainer.removeClass("d-none");
+  rulesContainer.addClass("d-none");
+}
+
+exitQuizBtn.on("click", function () {
+  startQuizPage();
+  heading.addClass("d-sm-none");
+  container.addClass("d-none");
+});
+
+startBtn.on("click", function () {
+  btnContainer.addClass("d-none");
+  rulesContainer.removeClass("d-none");
+});
+
+continueBtn.on("click", function () {
+  rulesContainer.addClass("d-none");
+  container.removeClass("d-none");
+  heading.addClass("d-sm-block").removeClass("d-sm-none");
+  quiz();
+});
+
+exitBtn.on("click", function () {
+  startQuizPage();
+});
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -80,7 +115,8 @@ function showQuestion() {
 function resetState() {
   nextBtn.addClass("d-none");
   answersList.empty();
-  nextBtn.text("NEXT");
+  exitQuizBtn.addClass("d-none");
+  nextBtn.text("NEXT").addClass("btn-dark").removeClass("btn-success");
   question.removeClass("text-center");
 }
 
@@ -106,7 +142,9 @@ function showScore() {
   question.text("Your scored " + score + " Out of " + questions.length + " !");
   question.addClass("text-center");
   nextBtn.removeClass("d-none");
+  nextBtn.removeClass("btn-dark").addClass("btn-success");
   nextBtn.text("Play Again");
+  exitQuizBtn.removeClass("d-none");
 }
 
 function handleNextBtn() {
@@ -125,5 +163,3 @@ nextBtn.on("click", function () {
     quiz();
   }
 });
-
-quiz();
