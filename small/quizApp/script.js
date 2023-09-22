@@ -103,7 +103,6 @@ let timerInterval;
 function startTimer() {
   time.text(countDown + "s");
   countDown--;
-
   if (countDown < 0) {
     clearInterval(timerInterval);
     countDown = 10;
@@ -135,6 +134,7 @@ function showQuestion() {
 }
 
 function resetState() {
+  countDown = 10;
   nextBtn.addClass("d-none");
   answersList.empty();
   exitQuizBtn.addClass("d-none");
@@ -187,6 +187,7 @@ function handleNextBtn() {
 }
 
 nextBtn.on("click", function () {
+  clearInterval(timerInterval);
   if (currentQuestionIndex < questions.length) {
     handleNextBtn();
   } else {
