@@ -123,7 +123,7 @@ function showQuestion() {
 
   currentQuestion.answers.forEach((answers) => {
     const button = $("<button>")
-      .addClass("btn btn-outline-dark d-block my-1 w-100 fs-4 text-start")
+      .addClass("btn btn-outline-light d-block my-1 w-100 fs-4 text-start")
       .text(answers.text);
     answersList.append(button);
     if (answers.correct) {
@@ -138,7 +138,7 @@ function resetState() {
   nextBtn.addClass("d-none");
   answersList.empty();
   exitQuizBtn.addClass("d-none");
-  nextBtn.text("NEXT").addClass("btn-dark").removeClass("btn-success");
+  nextBtn.text("NEXT").addClass("btn-light").removeClass("btn-success");
   question.removeClass("text-center");
   timeLeft.removeClass("d-none");
   btnWrapper
@@ -148,12 +148,12 @@ function resetState() {
 
 function selectAnswer() {
   $('.btn[data-correct="true"]')
-    .removeClass("btn-outline-dark")
+    .removeClass("btn-outline-light")
     .addClass("btn-success");
   const selectedBtn = $(this);
   const isCorrect = selectedBtn.data("correct") === true;
   $("#answers>.btn").not('[data-correct="true"]').prop("disabled", true);
-  selectedBtn.removeClass("btn-outline-dark");
+  selectedBtn.removeClass("btn-outline-light");
   if (isCorrect) {
     selectedBtn.addClass("btn-success");
     score++;
@@ -168,7 +168,7 @@ function showScore() {
   question.text("Your scored " + score + " Out of " + questions.length + " !");
   question.addClass("text-center");
   nextBtn.removeClass("d-none");
-  nextBtn.removeClass("btn-dark").addClass("btn-success");
+  nextBtn.removeClass("btn-light").addClass("btn-success");
   nextBtn.text("Play Again");
   exitQuizBtn.removeClass("d-none");
   timeLeft.addClass("d-none");
