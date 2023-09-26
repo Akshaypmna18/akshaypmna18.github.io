@@ -17,6 +17,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
 }
 
 body::-webkit-scrollbar {
@@ -25,14 +26,10 @@ body::-webkit-scrollbar {
 }
 
 form {
-  margin: 5rem 0;
-  width: min(95%, 20rem);
-  background: transparent;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  backdrop-filter: blur(2px);
-  box-shadow: 0 0 1px 1px #ccc;
+  min-height: 100dvh;
 }
 
 h1 {
@@ -44,7 +41,7 @@ h1 {
 div {
   position: relative;
   margin: 0.5rem auto;
-  width: 90%;
+  width: 90dvw;
 }
 
 li {
@@ -83,11 +80,6 @@ div > i {
   right: 0;
   padding: 0.75rem;
   cursor: pointer;
-  visibility: hidden;
-}
-
-input[type="password"]:valid + i {
-  visibility: visible;
 }
 
 button {
@@ -102,4 +94,20 @@ button {
 button:hover {
   border: 1px solid #fff;
   border-radius: 8px;
+}
+
+/* 
+MEDIAQUERIES
+*/
+
+@media (min-width: 567px) {
+  form {
+    width: min(95%, 25rem);
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px #ccc;
+    min-height: auto;
+  }
+  div {
+    width: 90%;
+  }
 }

@@ -56,6 +56,7 @@ password.addEventListener("input", function () {
     errorMessages[7].style.display = "none";
   }
 });
+
 eye.onclick = function () {
   if (eye.classList.contains("fa-eye-slash")) {
     eye.classList.replace("fa-eye-slash", "fa-eye");
