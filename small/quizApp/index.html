@@ -15,17 +15,21 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <title>Quiz App</title>
         <style>
+            :root {
+                --background-color: #393646
+            }
+
             * {
                 letter-spacing: 1px;
             }
 
             body {
-                background-color: #191A19 !important;
+                background-color: var(--background-color) !important;
             }
 
             #start-btn-container,
             #rules-container {
-                background-color: #191A19 !important;
+                background-color: var(--background-color) !important;
                 height: 100dvh;
             }
 
@@ -35,7 +39,7 @@
 
             #container {
                 min-height: 100dvh;
-                background-color: #191A19;
+                background-color: var(--background-color);
                 /* box-shadow: 3px 3px 3px #ccc; */
             }
 
