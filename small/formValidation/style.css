@@ -26,9 +26,8 @@ body::-webkit-scrollbar {
 }
 
 form {
-  padding-top: 2rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  place-items: center;
   min-height: 100dvh;
 }
 
@@ -83,6 +82,7 @@ div > i {
 }
 
 button {
+  display: block;
   margin: 0.25em auto 0.75rem auto;
   text-transform: uppercase;
   cursor: pointer;
