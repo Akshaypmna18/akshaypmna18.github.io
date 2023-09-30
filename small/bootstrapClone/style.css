@@ -57,9 +57,3 @@ MAIN
 .landing-page .container {
   max-width: 50rem;
 }
-
-@media (min-width: 390px) {
-  .landing-page img {
-    display: block !important;
-  }
-}
