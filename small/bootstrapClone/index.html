@@ -4,35 +4,280 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bootstrap . The most popular HTML, CSS and JS library in the world.</title>
-        <link rel="website icon" href="https://avatars.githubusercontent.com/u/2918581?s=280&v=4">
+        <title>Bootstrap · The most popular HTML, CSS and JS library in the world.</title>
+        <link rel="website icon" href="favicon.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
             integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body class="user-select-none">
+    <body class="user-select-none d-flex flex-column">
         <header>
-            <nav>
-                <div class="d-flex align-items-center justify-content-between bg-black d-none">
-                    <div class="d-block mx-auto ps-5">
-                        <img src="https://avatars.githubusercontent.com/u/2918581?s=280&v=4" alt="logo"
-                            class="pointer d-block ms-4">
+            <nav class=" d-flex align-items-center justify-content-between d-non">
+                <div class="d-block mx-auto ps-5 d-lg-flex justify-content-between mx-lg-0 ps-lg-0">
+                    <img src="header-logo.png" alt="logo" class="pointer d-block ms-4">
+                    <ul
+                        class="text-capitalize gap-2 mt-3 text-light ms-3 align-items-center list-unstyled d-none d-lg-flex">
+                        <li>docs</li>
+                        <li>example</li>
+                        <li>icons</li>
+                        <li>themes</li>
+                        <li>blog</li>
+                    </ul>
+                </div>
+                <div
+                    class="text-light d-none bg-gradient d-lg-flex align-items-center pointer border border-dark-subtle p-2 rounded gap-1 me-4 w-25">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p class="mb-0 ms-1 fw-bold">Search</p>
+                    <p class="badge bg-primary bg-gradient text-uppercase mb-0 ms-auto">ctrl+<span
+                            class="fw-bold">k</span>
+                    </p>
+                </div>
+                <div class="text-light d-none d-lg-flex">
+                    <div class="d-flex align-items-center gap-3 me-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="navbar-nav-svg"
+                            viewBox="0 0 512 499.36" role="img">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                            </path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="navbar-nav-svg"
+                            viewBox="0 0 512 416.32" role="img">
+                            <path fill="currentColor"
+                                d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92">
+                            </path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img">
+                            <path fill-opacity=".4"
+                                d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z">
+                            </path>
+                            <path
+                                d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z">
+                            </path>
+                        </svg>
                     </div>
-                    <div class="d-flex gap-3 me-3">
-                        <i class="pointer fs-2 text-secondary fa-solid fa-magnifying-glass"></i>
-                        <i class="pointer fs-2 text-secondary fa-solid fa-ellipsis"></i>
+                    <div class="my-3 border border-left border-dark-subtle"></div>
+                    <div class="py-3 dropdown">
+                        <button class="btn dropdown-toggle pointer text-light" type="button" id="versions"
+                            data-bs-toggle="dropdown" aria-expanded="false">v5.3</button>
+                        <ul class="dropdown-menu dropdown-menu-dark pointer" aria-labelledby="versions">
+                            <li class="dropdown-header">v5 Releases</li>
+                            <li class="dropdown-item active">Latest(5.3.x)</li>
+                            <li class="dropdown-item">v5.2.3</li>
+                            <li class="dropdown-item">v5.1.3</li>
+                            <li class="dropdown-item">v5.0.2</li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="dropdown-header">Previous releases</li>
+                            <li class="dropdown-item">v5.4.6.x</li>
+                            <li class="dropdown-item">v3.4.1</li>
+                            <li class="dropdown-item">v2.3.2</li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="dropdown-item">All versions</li>
+                        </ul>
+                    </div>
+                    <div class="my-3 border border-left border-dark-subtle"></div>
+                    <div class="py-3 dropdown me-3">
+                        <button class="btn dropdown-toggle pointer text-light" type="button" id="theme"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns=" http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-half" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+                            </svg></button>
+                        <ul class="dropdown-menu dropdown-menu-dark pointer" aria-labelledby="theme">
+                            <li class=" dropdown-item active">
+                                <svg xmlns=" http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-half" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+                                </svg> Auto
+                            </li>
+                            <li class=" dropdown-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                                </svg> Light
+                            </li>
+                            <li class="dropdown-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                                    <path
+                                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+                                </svg> Dark
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="bg-info p-5">
-                    hi
+                <div class="d-flex gap-3 me-3 d-lg-none icons">
+                    <i class="pointer fs-4 fa-solid fa-magnifying-glass"></i>
+                    <i class="pointer fs-2 text-light fa-solid fa-ellipsis"></i>
+                </div>
+
+                <div class="side-bar text-light px-4 py-2 overflow-auto position-absolute top-0 end-0 d-none z-1">
+                    <div class="d-flex justify-content-between align-items-center px-2">
+                        <p class="mt-3 fw-semibold fs-2 text-capitalize">bootstrap</p>
+                        <i class="fs-1 fa-solid fa-xmark pointer"></i>
+                    </div>
+                    <hr class="m-0">
+
+                    <ul class="row row-cols-2 py-3 ps-2 pointer text-capitalize list-unstyled">
+                        <li class="mb-2">docs</li>
+                        <li class="mb-2">examples</li>
+                        <li class="mb-2">icons</li>
+                        <li class="mb-2">themes</li>
+                        <li>blog</li>
+                    </ul>
+                    <hr class="m-0">
+
+                    <ul class="row row-cols-2 py-3 ps-2 list-unstyled pointer text-capitalize">
+                        <li class="mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                class="navbar-nav-svg mb-1" viewBox="0 0 512 499.36" role="img">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                                </path>
+                            </svg> github</li>
+                        <li class="mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                class="navbar-nav-svg mb-1" viewBox="0 0 512 416.32" role="img">
+                                <path fill="currentColor"
+                                    d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92">
+                                </path>
+                            </svg> twitter</li>
+                        <li class="mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg mb-1" viewBox="0 0 40 41"
+                                role="img">
+                                <path fill-opacity=".4"
+                                    d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z">
+                                </path>
+                                <path
+                                    d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z">
+                                </path>
+                            </svg> open collective</li>
+                    </ul>
+                    <hr class="m-0">
+
+                    <div class="py-3 dropdown">
+                        <button class="btn dropdown-toggle pointer text-light" type="button" id="versions"
+                            data-bs-toggle="dropdown" aria-expanded="false">Bootstrap v5.3</button>
+                        <ul class="dropdown-menu dropdown-menu-dark pointer" aria-labelledby="versions">
+                            <li class="dropdown-header">v5 Releases</li>
+                            <li class="dropdown-item active">Latest(5.3.x)</li>
+                            <li class="dropdown-item">v5.2.3</li>
+                            <li class="dropdown-item">v5.1.3</li>
+                            <li class="dropdown-item">v5.0.2</li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="dropdown-header">Previous releases</li>
+                            <li class="dropdown-item">v5.4.6.x</li>
+                            <li class="dropdown-item">v3.4.1</li>
+                            <li class="dropdown-item">v2.3.2</li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="dropdown-item">All versions</li>
+                        </ul>
+                    </div>
+                    <hr class="m-0">
+
+                    <div class="py-3 dropdown">
+                        <button class="btn dropdown-toggle pointer text-light" type="button" id="theme"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns=" http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-half" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+                            </svg> Auto</button>
+                        <ul class="dropdown-menu dropdown-menu-dark pointer" aria-labelledby="theme">
+                            <li class=" dropdown-item active">
+                                <svg xmlns=" http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-half" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+                                </svg> Auto
+                            </li>
+                            <li class=" dropdown-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                                </svg> Light
+                            </li>
+                            <li class="dropdown-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                                    <path
+                                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+                                </svg> Dark
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
 
+        <main class="flex-grow-1 bg-black">
+            <section class="landing-page d-flex flex-column justify-content-center align-items-center text-light">
+                <div
+                    class="text-center d-flex flex-wrap justify-content-center align-items-center gap-2 p-3 pt-5 pt-lg-4">
+                    <p class="badge py-2 fs-6 bg-warning text-dark pointer mb-0">New in v5.3</p>
+                    <p class="pt-sm-3">Color mode support, expanded color palette, and more!</p>
+                </div>
+                <img src="main-img.png" alt="logo" class="img-fluid d-none d-sm-block">
+                <div class="container">
+                    <h2 class="display-3 fw-semibold text-center">Build fast, responsive sites with Bootstrap</h2>
+                    <p class="text-center mt-2">Powerful, extensible, and feature-packed frontend toolkit. Build and
+                        customize
+                        with Sass, utilize
+                        prebuilt grid system and components, and bring projects to life with powerful JavaScript
+                        plugins.
+                    </p>
+                </div>
+                <div class="text-center d-flex flex-wrap justify-content-center align-items-center gap-3 mt-2">
+                    <p class="btn bg-gradient text-light border">$ npm i bootstrap@5.3.2 <svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor"
+                            class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path
+                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                            <path
+                                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                        </svg></p>
+                    <p class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
+                            <path
+                                d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                        </svg> Read the docs</p>
+                </div>
+                <div class=" d-flex flex-wrap justify-content-center gap-2">
+                    <p>Currently <span class="fw-bold">v5.3.2</span> ·</p>
+                    <p class="pointer  text-decoration-underline">Download</p> ·
+                    <p class="pointer text-decoration-underline">All releases
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            const dotsIcon = $('.fa-ellipsis'), xIcon = $('.fa-xmark'), sideBar = $('.side-bar')
+
+            dotsIcon.on('click', function () {
+                sideBar.removeClass('d-none')
+            })
+            xIcon.on('click', function () {
+                sideBar.addClass('d-none')
+            })
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 

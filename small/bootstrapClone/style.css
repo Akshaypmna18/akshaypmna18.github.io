@@ -2,22 +2,64 @@
   cursor: pointer;
 }
 
+body {
+  min-height: 100dvh;
+}
+
 /* 
 Header
 */
 
-header {
-  min-height: 12dvh;
+nav,
+nav > div:last-of-type {
+  background-color: #7c11f9;
 }
 
 header img {
-  max-width: 4rem;
+  max-width: 3.5rem;
+  transition-duration: 0.3s;
+}
+header img:hover {
+  transform: rotateZ(-20deg) scale(1.05);
 }
 
-header i:hover {
+header .icons {
+  color: #ccc;
+}
+header .icons i:hover {
   color: #fff !important;
 }
 
-header div:last-of-type {
-  height: 100dvh;
+nav > div:last-of-type {
+  min-height: 100dvh;
+  max-width: 25rem;
+}
+
+nav .row .pointer {
+  color: #ccc !important;
+}
+nav .row .pointer:hover {
+  color: #fff !important;
+}
+
+/* 
+MAIN
+*/
+
+.landing-page {
+  backdrop-filter: blur(15px);
+  background: url("https://img.freepik.com/free-photo/abstract-gradient-neon-lights_23-2149279141.jpg?w=740&t=st=1696071174~exp=1696071774~hmac=806ebb9186bcc486f7230ce5cbf31967a541811dc1b5b4ce9764d8208806f172");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.landing-page .container {
+  max-width: 50rem;
+}
+
+@media (min-width: 390px) {
+  .landing-page img {
+    display: block !important;
+  }
 }
