@@ -31,8 +31,12 @@
                 cursor: pointer;
             }
 
-            .notes:hover {
-                background-color: #111 !important;
+            .note:hover {
+                background-color: green !important;
+            }
+
+            .add-box:hover {
+                background-color: blue !important;
             }
 
             .row .card {
@@ -72,20 +76,20 @@
         </style>
     </head>
 
-    <body class="container-fluid position-relative font-poppins">
-        <h1 class="text-capitalize text-black letter-space display-1 fw-bold text-center mt-5 user-select-none">
+    <body class="container-fluid position-relative font-poppins bg-dark ">
+        <h1 class="text-capitalize text-danger letter-space display-1 fw-bold text-center mt-5 user-select-none">
             notes app</h1>
 
         <div class="row p-2 px-sm-3 px-md-4 px-lg-5 mt-3 gap-2 gap-sm-3">
             <div
-                class="cols-12 add-box notes border-0 card bg-dark text-white d-flex justify-content-center align-items-center pointer">
+                class="cols-12 add-box border-0 card bg-primary text-white d-flex justify-content-center align-items-center pointer">
                 <i class="fa-solid fa-circle-plus mt-4"></i>
                 <h3 class="mt-2 user-select-none text-center">Add new note</h3>
             </div>
         </div>
 
-        <div class="add-popup-box card bg-dark position-fixed top-50 start-50 translate-middle p-2 p-sm-3 d-none">
-            <div class="text-light d-flex justify-content-between align-items-center gap-1 p-2">
+        <div class="add-popup-box card bg-secondary position-fixed top-50 start-50 translate-middle p-2 p-sm-3 d-one">
+            <div class="text-black d-flex justify-content-between align-items-center gap-1 p-2">
                 <h3 class="fw-bold">Add a new note</h3>
                 <i class="x-icon fa-solid fa-xmark fs-2 pointer mb-2 mb-sm-1"></i>
             </div>
@@ -98,7 +102,7 @@
                 <label for="description">Description</label>
             </div>
             <button
-                class="add-note-btn btn btn-light text-capitalize w-50 d-block mx-auto mt-1 fw-semibold letter-space">add
+                class="add-note-btn btn btn-dark text-capitalize w-50 d-block mx-auto mt-1 fw-semibold letter-space">add
                 note</button>
         </div>
 

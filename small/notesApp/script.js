@@ -36,7 +36,7 @@ function showNotes() {
   $.each(notes, function (index) {
     let capitalizedTitle = capitalizeFirstLetter(notes[index].title),
       capitalizedDesc = capitalizeFirstLetter(notes[index].description),
-      noteEle = `<div class="user-select-none notes note border-0 card bg-dark text-light position-relative p-1" data-index="${index}" data-title="${capitalizedTitle}" data-desc="${capitalizedDesc}">
+      noteEle = `<div class="user-select-none note border-0 card bg-success pointer text-light position-relative p-1" data-index="${index}" data-title="${capitalizedTitle}" data-desc="${capitalizedDesc}">
     <div class="px-sm-3 py-2 pointer">
         <h3 class="fs-3 fw-semibold my-1 title-overflow">${capitalizedTitle}  </h3>
         <p class="fs-5 desc-overflow mt-0">${capitalizedDesc}</p>
