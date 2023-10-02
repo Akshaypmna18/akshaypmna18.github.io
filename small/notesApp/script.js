@@ -4,7 +4,7 @@ const addBox = $(".add-box"),
   xIcon = $(".x-icon"),
   addNoteBtn = $(".add-note-btn"),
   editNoteBtn = $(".edit-note-btn"),
-  container = $(".container"),
+  container = $(".row"),
   newTitle = $(".add-popup-box #title"),
   newDesc = $(".add-popup-box #description");
 let isUpdate = false,
@@ -30,22 +30,22 @@ const notes = JSON.parse(localStorage.getItem("notes") || "[]");
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
-// onclick="editNote(${index},'${capitalizedTitle}','${capitalizedDesc}')"
+
 function showNotes() {
-  $(".container").find(".note").remove();
+  container.find(".note").remove();
   $.each(notes, function (index) {
     let capitalizedTitle = capitalizeFirstLetter(notes[index].title),
       capitalizedDesc = capitalizeFirstLetter(notes[index].description),
-      noteEle = `<div class="user-select-none note border-0 card bg-dark text-light position-relative" data-index="${index}" data-title="${capitalizedTitle}" data-desc="${capitalizedDesc}">
-    <div class="px-3 py-2 pointer">
+      noteEle = `<div class="user-select-none notes note border-0 card bg-dark text-light position-relative p-1" data-index="${index}" data-title="${capitalizedTitle}" data-desc="${capitalizedDesc}">
+    <div class="px-sm-3 py-2 pointer">
         <h3 class="fs-3 fw-semibold my-1 title-overflow">${capitalizedTitle}  </h3>
         <p class="fs-5 desc-overflow mt-0">${capitalizedDesc}</p>
     </div>
-    <div class="mb-1 position-absolute bottom-0 px-3 w-100">
+    <div class="mb-1 position-absolute bottom-0 px-sm-3 w-100">
         <hr class="m-0 p-0 mb-1">
         <div class="d-flex justify-content-between align-items-center mb-1">
             <p class="fs-6 mb-0 user-select-none">${notes[index].date}</p>
-            <i onclick="deleteNote(${index})" class="fs-6 fa-solid fa-trash me-1 pointer"></i>
+            <i onclick="deleteNote(${index})" class="fs-6 fa-solid fa-trash me-2 me-sm-1 pointer"></i>
         </div>
     </div>
 </div>`;
@@ -108,7 +108,7 @@ function deleteNote(index) {
   showNotes();
 }
 
-$(".container").on("click", ".note", function () {
+container.on("click", ".note", function () {
   const index = $(this).data("index");
   const title = $(this).data("title");
   const desc = $(this).data("desc");
