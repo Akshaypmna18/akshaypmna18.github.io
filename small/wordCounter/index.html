@@ -26,7 +26,7 @@
                 let input = $('textarea').val()
                 let wordCount = input.split(/\s+/).filter(Boolean).length,
                     charCount = input.replace(/[^a-zA-Z]/g, "").length,
-                    spaceCount = input.split(' ').length - 1;
+                    spaceCount = input.split(/\s+/).length - 1;
                 $('#word-count').text(wordCount)
                 $('#char-count').text(charCount)
                 $('#space-count').text(spaceCount)
