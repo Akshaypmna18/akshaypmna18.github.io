@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Word Counter</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="text-capitalize">word counter</h1>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Provide the text here..." autofocus></textarea>
+            <p class="fw-bold">Word count : <span id="word-count" class=" fw-normal">-</span></p>
+            <p class="fw-bold">Character count : <span id="char-count" class=" fw-normal">-</span></p>
+            <p class="fw-bold">Number of spaces : <span id="space-count" class=" fw-normal">-</span></p>
+        </div>
+
+        <script>
+            $('textarea').on('input', function () {
+                let input = $('textarea').val()
+                let wordCount = input.split(/\s+/).filter(Boolean).length,
+                    charCount = input.replace(/[^a-zA-Z]/g, "").length,
+                    spaceCount = input.split(' ').length - 1;
+                $('#word-count').text(wordCount)
+                $('#char-count').text(charCount)
+                $('#space-count').text(spaceCount)
+            })
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
