@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Masonry Gallery</title>
+        <link rel="icon"
+            href="https://play-lh.googleusercontent.com/43mEltaVvXFqJbpfAAwoDCMDlAAovIkuciYyi0ud0HnuHz0qJ9I-akqxg-6ApvOkTALi">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster" rel="stylesheet">
+        <style>
+            html,
+            body {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                background: url('https://i0.wp.com/backgroundabstract.com/wp-content/uploads/edd/2022/02/333-1-e1656014656515.jpg?fit=574%2C367&ssl=1');
+                background-attachment: fixed;
+            }
+
+            body::-webkit-scrollbar {
+                width: 0.1px;
+                height: 0.1px;
+            }
+
+            h1 {
+                font-family: 'Lobster', cursive;
+                letter-spacing: 1px;
+            }
+
+            img {
+                cursor: pointer;
+                opacity: 0;
+                filter: blur(2px);
+                transform: translateX(-100%);
+                transition: all 1s;
+            }
+
+            .show-img {
+                filter: blur(0);
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            img:hover {
+                scale: 1.05;
+            }
+
+            .container {
+                columns: 4 250px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="display-1 fw-semibold text-capitalize text-center p-2 p-md-3 my-md-3 mx-auto text-light">masonry
+            gallery</h1>
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1696096752361-ff821613a8d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696448442843-f1fd43dcb758?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696295720867-8a6e2e30cf57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696257220964-c9115d9aabc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696321832508-ba1e671f4406?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696229250077-bf5e4d7f7106?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696418800198-46f438ffbd27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIzfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696448442843-f1fd43dcb758?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696295720867-8a6e2e30cf57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696257220964-c9115d9aabc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696321832508-ba1e671f4406?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696418800198-46f438ffbd27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIzfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696229250077-bf5e4d7f7106?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+            <img src="https://images.unsplash.com/photo-1696096752361-ff821613a8d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img" class="img-fluid rounded shadow mb-2">
+        </div>
+
+        <script>
+            function createIntersectionObserver(className) {
+                return new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            $(entry.target).addClass(className);
+                        } else {
+                            $(entry.target).removeClass(className);
+                        }
+                    });
+                });
+            }
+            const hiddenImages = $("img");
+            const observer1 = createIntersectionObserver("show-img");
+            hiddenImages.each(function () {
+                observer1.observe(this);
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
