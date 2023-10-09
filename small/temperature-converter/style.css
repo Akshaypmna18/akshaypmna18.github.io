@@ -113,19 +113,3 @@ Mediaquerries
     height: 100vh;
   }
 }
-
-@media (min-height: 700px) {
-  body {
-    padding-top: 9rem;
-  }
-}
-@media (min-height: 800px) {
-  body {
-    padding-top: 11.5rem;
-  }
-}
-@media (min-height: 900px) {
-  body {
-    padding-top: 14rem;
-  }
-}
