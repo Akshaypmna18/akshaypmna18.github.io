@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
+  user-select: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+.container header,
+.container footer {
+  height: min(15vh, 20vh);
+  background-color: #232f3e;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  text-align: center;
+}
+.container header img {
+  margin-top: 1rem;
+  width: min(50vw, 15rem);
+  cursor: pointer;
+}
+.container main {
+  flex: 1;
+  margin-left: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+main div:first-of-type {
+  position: relative;
+  color: #fff;
+}
+main div:first-of-type > p {
+  position: absolute;
+  top: 45%;
+  left: 7rem;
+  z-index: 1;
+}
+main img {
+  width: min(100%, 20rem);
+  height: 20rem;
+}
+main h1 {
+  font-size: 2.25rem;
+}
+main p {
+  margin-top: 0.25rem;
+}
+.container main p span {
+  font-weight: bold;
+}
+
+main .features {
+  padding-top: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.color-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.color-wrapper div {
+  width: 1.5rem;
+  height: 1.5rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.black {
+  background-color: #23211f;
+}
+.red {
+  background-color: #ca3d22;
+}
+.blue {
+  background-color: #565681;
+}
+.pink {
+  background-color: #e9c7be;
+}
+.purple {
+  background-color: #8a5362;
+}
+
+.btn-wrapper button {
+  background-color: #ccc;
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: #000;
+  outline: none;
+  border: transparent;
+  cursor: pointer;
+  background-color: #ff9900;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}
+
+main > div > button {
+  margin-top: 0.7rem;
+  font-size: 1rem;
+}
+.btn-wrapper .active {
+  background-color: #aaa;
+}
+
+main div:first-of-type .heart-rate {
+  position: absolute;
+  top: 55%;
+  left: 1rem;
+  z-index: 1;
+}
+main div:first-of-type .heart-rate .fa-solid {
+  color: #f70202;
+  font-size: 3rem;
+  position: absolute;
+  left: 6rem;
+  top: -2.5rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    padding-top: calc(10dvh - 2rem);
+  }
+  main h1 {
+    font-size: 2.5rem;
+  }
+  main div:first-of-type > p {
+    position: absolute;
+    top: 40%;
+    left: 5.5rem;
+    z-index: 1;
+  }
+  main div:first-of-type .heart-rate {
+    position: absolute;
+    top: 45%;
+    left: 1rem;
+    z-index: 1;
+  }
+  main div:first-of-type .heart-rate .fa-solid {
+    color: #f70202;
+    font-size: 3rem;
+    position: absolute;
+    left: 5rem;
+    top: -2.5rem;
+  }
+  main p {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+  }
+  main .features {
+    font-size: 1.5rem;
+  }
+  button {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  .color-wrapper {
+    margin-top: 0.5rem;
+  }
+
+  main > div > button {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  main div:first-of-type > p {
+    position: absolute;
+    top: 35%;
+    left: 7rem;
+    z-index: 1;
+  }
+  main div:first-of-type .heart-rate {
+    position: absolute;
+    top: 40%;
+    left: 2rem;
+    z-index: 1;
+  }
+  main div:first-of-type .heart-rate .fa-solid {
+    color: #f70202;
+    font-size: 3rem;
+    position: absolute;
+    left: 6.5rem;
+    top: -2.5rem;
+  }
+}
