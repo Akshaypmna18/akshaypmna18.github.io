@@ -30,7 +30,6 @@ body > h1 {
   justify-content: center;
   gap: 1rem;
   min-height: 100dvh;
-  background-color: #fff;
   padding: 1rem;
   border-radius: 8px;
 }
@@ -77,19 +76,26 @@ Mediaquerries
 
 @media (min-width: 576px) {
   body {
-    background-color: #f6f6f6;
-    padding-top: 6.5rem;
+    background: url("https://static.vecteezy.com/system/resources/previews/006/879/154/large_2x/abstract-and-pattern-background-illustration-with-gradient-color-of-violet-this-luxurious-background-is-suitable-for-presentation-poster-wallpaper-personal-website-ui-and-ux-experiences-etc-free-photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100dvh;
   }
 
   body > h1 {
     display: block;
+    /* color: ; */
   }
 
   #container {
     min-height: auto;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 4px 4px 4px #ccc;
+    backdrop-filter: blur(25px);
+    border: 2px solid #402573;
+  }
+
+  input {
+    background: transparent;
   }
 
   #container > h1 {
