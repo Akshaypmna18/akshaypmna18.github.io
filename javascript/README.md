@@ -1,0 +1,1 @@
+Explore my collection of web projects developed with HTML5, CSS3, Bootstrap 5, Vanilla JS and jQuery. These projects helped me improve my coding skills to another level. It includes interactive calculators to dynamic quiz apps powered by APIs and more.
