@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link rel="icon"
+            href="https://play-lh.googleusercontent.com/zKItj98VmG8dDPPRsy1x-FncD9QuD7YdM9f-CrgWa_mhqMoi_5M4Nrdmu5_Zg4qdhg=s256-rw">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&family=Lobster"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="bg-dark d-flex flex-column justify-content-center">
+        <h1 class="display-1 fw-bold text-capitalize text-center my-3 letterspace text-light">weather app</h1>
+
+        <div class="card mx-auto mb-3 text-light">
+            <div class="card-header border-0 d-flex position-relative mt-3 px-2 mx-auto">
+                <input type="text" class="text-capitalize letterspace form-control rounded-4 fw-semibold border-0"
+                    placeholder="Enter City Name...">
+                <i class="fa-solid fa-magnifying-glass pointer text-secondary position-absolute end-0 me-4 pe-2"></i>
+            </div>
+            <div class="card-body">
+                <!-- https://clipart-library.com/images_k/sun-silhouette-vector/sun-silhouette-vector-2.png
+                 https://png.pngtree.com/png-clipart/20230522/original/pngtree-weather-vector-png-image_9167000.png
+                https://png.pngtree.com/png-clipart/20220909/original/pngtree-cloud-and-sun-type-of-weather-png-image_8500172.png
+            https://cdn.pixabay.com/photo/2012/04/18/13/22/cloud-37011_960_720.png
+        https://cdn.pixabay.com/photo/2014/04/02/14/10/cloud-306404_1280.png
+    https://cdn-icons-png.flaticon.com/512/5903/5903552.png
+https://cdn-icons-png.flaticon.com/512/172/172922.png-->
+                <img src="https://clipart-library.com/images_k/sun-silhouette-vector/sun-silhouette-vector-2.png"
+                    alt="clear-sun" class="img-fluid d-block mx-auto mb-3">
+                <p class="display-4 fw-semibold text-center mb-1 temp">22°c</p>
+                <p class="display-6 fw-semibold text-center text-capitalize city"></p>
+            </div>
+
+            <div class="card-footer border-0 d-flex justify-content-center gap-2 gap-sm-3 mb-3"></div>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.0.3/tilt.jquery.min.js">
+        </script>
+        <script>
+            const tilt = $('.card').tilt({
+                scale: 1.01,
+                glare: true,
+                maxGlare: .5
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
