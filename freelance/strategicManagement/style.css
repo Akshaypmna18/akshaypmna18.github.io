@@ -8,7 +8,7 @@
 }
 
 h1 {
-  color: var(--shiny-gold);
+  color: var(--teal-green);
 }
 
 footer {
@@ -26,10 +26,6 @@ footer .text-uppercase {
 
 header i {
   color: var(--royal-blue);
-}
-
-header ul > a {
-  color: var(--teal-green);
 }
 
 header a > p {
