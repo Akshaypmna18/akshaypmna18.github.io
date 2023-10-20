@@ -1,0 +1,56 @@
+:root {
+  --royal-blue: #002366;
+  --teal-green: #00b3b6;
+  --shiny-gold: #ffdd43;
+}
+* {
+  font-family: poppins;
+}
+
+h1 {
+  color: var(--shiny-gold);
+}
+
+footer {
+  background-color: var(--royal-blue);
+  min-height: 15dvh;
+}
+
+footer .width {
+  max-width: 20rem;
+}
+
+footer .text-uppercase {
+  color: var(--shiny-gold);
+}
+
+header i {
+  color: var(--royal-blue);
+}
+
+header ul > a {
+  color: var(--teal-green);
+}
+
+header a > p {
+  color: var(--royal-blue);
+}
+
+header li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--shiny-gold);
+  display: block;
+  transition: 0.5s;
+}
+
+header li:hover::after {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  main img {
+    max-width: 30rem !important;
+  }
+}
