@@ -41,7 +41,7 @@ $("i").on("click", function (e) {
 });
 
 function updateCityName() {
-  cityName = $("input").val();
+  cityName = $("input").val().trim();
   checkWeather(cityName);
 }
 
