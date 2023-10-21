@@ -45,12 +45,24 @@ function updateCityName() {
   checkWeather(cityName);
 }
 
-// const weather = {
-//   clear:
-//     "https://clipart-library.com/images_k/sun-silhouette-vector/sun-silhouette-vector-2.png",
-//   thunderstorm:
-//     " https://png.pngtree.com/png-clipart/20230522/original/pngtree-weather-vector-png-image_9167000.png",
-// };
+const weatherIcon = $(".weather-icon");
+const weather = {
+  clear:
+    "https://clipart-library.com/images_k/sun-silhouette-vector/sun-silhouette-vector-2.png",
+  thunderstorm:
+    " https://png.pngtree.com/png-clipart/20230522/original/pngtree-weather-vector-png-image_9167000.png",
+  clouds:
+    "  https://png.pngtree.com/png-clipart/20220909/original/pngtree-cloud-and-sun-type-of-weather-png-image_8500172.png",
+  rain: "https://cdn.pixabay.com/photo/2012/04/18/13/22/cloud-37011_960_720.png",
+  drizzle:
+    "https://png.pngtree.com/png-clipart/20220909/original/pngtree-cloud-and-sun-type-of-weather-png-image_8500172.png",
+  mist: "https://cdn-icons-png.flaticon.com/512/5903/5903552.png",
+};
+
+function displayImage(condition) {
+  weatherIcon.attr("src", weather[condition.toLowerCase()]);
+}
+
 // async function checkWeather() {
 //   const response = await fetch(apiUrl + `&appid=${apiKey}`);
 //   let data = await response.json();
@@ -67,6 +79,8 @@ function checkWeather(city) {
       $(".temp").text(`${Math.floor(data.main.temp)}°c`);
       $("#humidity").text(`${Math.floor(data.main.humidity)}%`);
       $("#wind-speed").text(`${data.wind.speed} Km/h`);
+      let condition = data.weather[0].main;
+      displayImage(condition);
     },
     error: function (xhr, status, error) {
       alert("Incorrect City name");
