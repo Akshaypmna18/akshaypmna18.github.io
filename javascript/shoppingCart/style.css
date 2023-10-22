@@ -33,7 +33,7 @@ header .cart-count {
 }
 
 main .card {
-  width: min(90%, 12rem);
+  width: min(90%, 9rem);
 }
 main img {
   max-height: 12rem;
@@ -69,4 +69,10 @@ label {
 #checkout-container button {
   background-color: #003049;
   max-width: 10rem;
+}
+
+@media (min-width: 420px) {
+  main .card {
+    width: min(90%, 12rem);
+  }
 }
