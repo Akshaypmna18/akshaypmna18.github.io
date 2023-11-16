@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital Devices Online Store</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1330/1330818.png">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        }
+                    }
+                },
+            }
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+        <style type="text/tailwindcss">
+            @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+            body{
+                font-family: tilt neon;
+            }
+          </style>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    </head>
+
+    <body class="relative flex flex-col min-h-[100dvh] bg-[#f6f6f6]">
+        <header class="sticky inset-0 shadow bg-[#ffffff]">
+            <nav class="flex flex-wrap justify-between items-center p-3 relative xl:w-[80%] xl:mx-auto">
+                <h3 class="border p-1 border-red-500 cursor-pointer text-2xl">DD</h3><!--md:dd store-->
+                <div class="relative md:left-[10%]">
+                    <input type="text" placeholder="Search..." class="w-[8rem] min-[300px]:w-[calc(10rem+4.5vw)]">
+                    <i class="fa-solid fa-magnifying-glass absolute top-[30%] right-2 text-gray-500 cursor-pointer"></i>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <ul
+                        class="absolute top-full w-full left-0 px-4 border-b sm:border-0 shadow sm:shadow-none text-center sm:px-0 py-2 sm:py-0 sm:static hidden sm:flex sm:w-[initial] gap-2 md:gap-3 lg:gap-4 md:mr-4 items-center sm:mr-2 sm:bg-transparent">
+                        <li class="my-1 sm:my-0">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="my-1 sm:my-0">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="my-1 sm:my-0">
+                            <a href="#">Products</a>
+                        </li>
+                        <li class="my-1 sm:my-0">
+                            <a href="#">Contact</a>
+                        </li>
+                        <li class="my-1 sm:my-0">
+                            <a href="#">Services</a>
+                        </li>
+                    </ul>
+                    <i class="fa-solid fa-bag-shopping cursor-pointer text-3xl hover:text-red-500"></i>
+                    <i class="fa-solid fa-bars cursor-pointer text-3xl hover:text-red-500 sm:hidden"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="grow"></main>
+
+        <footer class="sticky inset-0 bg-[#ffffff]">
+            <div
+                class="p-3 xl:w-[80%] xl:mx-auto flex flex-col sm:flex-row justify-center items-center sm:justify-between gap-4 sm:gap-8">
+                <ul class="flex flex-col items-center justify-center gap-2">
+                    <li>Email :- customercare@ddstore.in</li>
+                    <li>Phone :- 01-23456789</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <div class="flex flex-col jusitify-center items-center">
+                    <h3 class="mb-2">Follow us</h3>
+                    <ul class="flex gap-4 justify-center">
+                        <li class="flex items-center"><a href="#">
+                                <i class="fa-brands fa-instagram hover:text-red-500 cursor-pointer text-xl"></i>
+                            </a>
+                        <li class="flex items-center"><a href="#"><i
+                                    class="fa-brands fa-youtube hover:text-red-500 cursor-pointer text-xl"></i></a>
+                        </li>
+                        <li class="flex items-center"><a href="#"><i
+                                    class="fa-brands fa-facebook-f hover:text-red-500 cursor-pointer text-xl"></i></a>
+                        </li>
+                        <li class="flex items-center"><a href="#"><i
+                                    class="fa-brands fa-x-twitter hover:text-red-500 cursor-pointer text-xl"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="flex flex-col gap-2 items-center justify-center">
+                    <li class="text-center"> Privacy Policy Terms and Conditions </li>
+                    <li>© Digital Devices Store, 2023</li>
+                    <li>All Rights Reserved</li>
+                </ul>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+
+</html>

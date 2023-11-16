@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Generator</title>
+        <link rel="icon"
+            href="https://play-lh.googleusercontent.com/mQFp55qQVvnODn7jd_uiTqkX5lckKzewZMVLRMsgD24EMhRCactLwD1ouzFxmx5M2VQ">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&family=Lobster"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        }
+                    }
+                }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    } 
+            * {
+                font-family: poppins;
+            }
+
+            header {
+                background: url('https://images.unsplash.com/photo-1564632516593-e1be25b7ee33?auto=format&fit=crop&q=80&w=1471&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                min-height: 45dvh;
+            }
+  </style>
+    </head>
+
+    <body>
+        <header
+            class="bg-no-repeat bg-cover bg-center text-white flex flex-col justify-center items-center p-4 gap-2 sm:gap-4">
+            <h1 class="text-5xl sm:text-6xl text-center capitalize font-bold tracking-wide">ai image generator</h1>
+            <p class="font-semi-bold text-center text-xl sm:text-2xl italic">Convert your text into image</p>
+            <div
+                class="flex flex-wrap items-center bg-white rounded-xl min-[530px]:rounded-3xl min-[530px]:px-2 py-1 justify-between mb-2 min-[530px]:mb-0 min-[530px]:mt-3 w-[min(95%,40rem)] min-[1200px]:w-[50dvw]">
+                <input id="input"
+                    class="text-gray-800 flex-grow outline-none px-2 border-0 ml-1 bg-transparent focus:ring-0"
+                    type="text" placeholder="Describe what you want" />
+                <div class="flex items-center px-2 rounded-lg space-x-4 mx-auto">
+                    <select id="img-len"
+                        class="text-base text-gray-800 outline-none cursor-pointer py-2 rounded-lg border-0 focus:ring-0">
+                        <option value="1" selected>1 image</option>
+                        <option value="2">2 images</option>
+                        <option value="3">3 images</option>
+                        <option value="4">4 images</option>
+                    </select>
+                    <button
+                        class="bg-gray-700 text-white text-base rounded-lg px-4 py-2 font-thin mt-2 min-[530px]:mt-0">Search</button>
+                </div>
+            </div>
+        </header>
+
+        <main
+            class="flex flex-wrap justify-center items-center p-3 gap-2 lg:gap-4 mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10">
+            <!-- <div class="relative">
+                <img src="https://media.istockphoto.com/id/458017717/vector/king-lion-aslan.jpg?s=612x612&w=0&k=20&c=yKt4ae9kvAdf3JsMsZqb4vZ43sch49ky5rEQ_n8X7-Q="
+                    alt="" class="rounded-lg max-h-48 sm:max-h-52 md:max-h-64 lg:max-h-72">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download cursor-pointer absolute bg-white bottom-2 right-2 rounded-3xl p-1
+                    " width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                    <path d="M7 11l5 5l5 -5"></path>
+                    <path d="M12 4l0 12"></path>
+                </svg>
+            </div> -->
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
