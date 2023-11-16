@@ -105,7 +105,7 @@ function startTimer() {
   countDown--;
   if (countDown < 0) {
     clearInterval(timerInterval);
-    countDown = 10;
+    countDown = 9;
     handleNextBtn();
   }
 }
